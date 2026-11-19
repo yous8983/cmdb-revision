@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1f6feb">
+  <meta name="description" content="Révision de la certification ServiceNow CMDB Data Foundations">
+  <title>CMDB Révision</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="btn-icon" id="btn-home" aria-label="Accueil" hidden>←</button>
+    <h1 id="page-title">CMDB Révision</h1>
+  </header>
+
+  <main id="main">
+    <!-- Accueil -->
+    <section id="view-home" class="view active" aria-labelledby="home-title">
+      <div class="hero">
+        <h2 id="home-title">ServiceNow CMDB<br>Data Foundations</h2>
+        <p class="muted">Fiches, quiz et flashcards pour préparer la certification.</p>
+      </div>
+      <div class="stats-row" id="home-stats"></div>
+      <nav class="home-grid" aria-label="Sections">
+        <button class="home-card" data-goto="fiches"><span class="ico">📘</span><span>Fiches</span></button>
+        <button class="home-card" data-goto="quiz"><span class="ico">✅</span><span>Quiz</span></button>
+        <button class="home-card" data-goto="flashcards"><span class="ico">🔁</span><span>Flashcards</span></button>
+        <button class="home-card" data-goto="progression"><span class="ico">📈</span><span>Progression</span></button>
+      </nav>
+    </section>
+
+    <!-- Fiches -->
+    <section id="view-fiches" class="view" aria-label="Fiches">
+      <label class="field">
+        <span class="sr-only">Thème</span>
+        <select class="theme-filter" id="fiches-theme"></select>
+      </label>
+      <div id="fiches-list"></div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="view-quiz" class="view" aria-label="Quiz">
+      <div id="quiz-root"></div>
+    </section>
+
+    <!-- Flashcards -->
+    <section id="view-flashcards" class="view" aria-label="Flashcards">
+      <label class="field">
+        <span class="sr-only">Thème</span>
+        <select class="theme-filter" id="flash-theme"></select>
+      </label>
+      <div id="flash-root"></div>
+    </section>
+
+    <!-- Progression -->
+    <section id="view-progression" class="view" aria-label="Progression">
+      <div id="progress-root"></div>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="Navigation principale">
+    <button class="tab" data-goto="fiches"><span class="ico">📘</span>Fiches</button>
+    <button class="tab" data-goto="quiz"><span class="ico">✅</span>Quiz</button>
+    <button class="tab" data-goto="flashcards"><span class="ico">🔁</span>Flashcards</button>
+    <button class="tab" data-goto="progression"><span class="ico">📈</span>Progression</button>
+  </nav>
+
+  <script src="js/progress.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

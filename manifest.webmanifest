@@ -1,0 +1,15 @@
+{
+  "name": "CMDB Révision — ServiceNow Data Foundations",
+  "short_name": "CMDB Révision",
+  "description": "Révision de la certification ServiceNow CMDB Data Foundations",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1117",
+  "theme_color": "#1f6feb",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
