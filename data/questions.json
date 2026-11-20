@@ -1477,5 +1477,129 @@
     ],
     "explication": "Potential license, governance, and insight implications, et risque de dupliquer des classes existantes.",
     "analogie": "Deux catégories « four » et « appareil de cuisson à pizza » pour la même chose."
+  },
+  {
+    "id": "q-ire-cas-usage-1",
+    "theme": "configurer-cmdb",
+    "notion": "ire-cas-usage",
+    "question": "Quels sont les objectifs principaux de l'IRE selon le cours ? (plusieurs réponses)",
+    "choix": [
+      "Reduce Duplicates",
+      "Decrease Undesired Updates to CIs",
+      "Stop Attribute Flapping",
+      "Accélérer les scans Discovery"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Le cours cite trois cas d'usage : réduire les doublons, réduire les mises à jour non désirées et arrêter l'oscillation des attributs.",
+    "analogie": "Le contrôleur évite les fiches en double et les réécritures contradictoires."
+  },
+  {
+    "id": "q-ire-cas-usage-2",
+    "theme": "configurer-cmdb",
+    "notion": "ire-cas-usage",
+    "question": "Qu'est-ce que l'« attribute flapping » ?",
+    "choix": [
+      "Un attribut qui alterne entre plusieurs valeurs selon la source qui a fait la dernière mise à jour",
+      "Un attribut supprimé par erreur",
+      "Un CI créé en double",
+      "Un attribut non découvrable laissé vide"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Les données de plusieurs sources (Discovery, AWS, SCCM…) font osciller les attributs selon la source qui a mis à jour en dernier.",
+    "analogie": "Deux fournisseurs qui réécrivent tour à tour la puissance du four."
+  },
+  {
+    "id": "q-ire-cas-usage-3",
+    "theme": "configurer-cmdb",
+    "notion": "ire-cas-usage",
+    "question": "Que fait l'IRE avec les payloads qu'il traite ? (plusieurs réponses)",
+    "choix": [
+      "Créer de nouveaux CI",
+      "Mettre à jour des CI existants",
+      "Générer des rapports de coûts",
+      "Attribuer des rôles aux utilisateurs"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "L'IRE traite des payloads pour maintenir la CMDB : création de nouveaux CI et mises à jour des CI existants.",
+    "analogie": "Le contrôleur enregistre un nouveau four ou complète la fiche d'un four déjà connu."
+  },
+  {
+    "id": "q-ingestion-via-ire-1",
+    "theme": "configurer-cmdb",
+    "notion": "ingestion-via-ire",
+    "question": "Comment les CI logiques (Business Applications, Application Services, Services, Service Offerings) sont-ils créés selon le schéma ?",
+    "choix": [
+      "Par assistant (Wizard Driven)",
+      "Par Discovery",
+      "Par Agent Client Collector",
+      "Par import LDAP"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Sur le schéma, les CI logiques sont « Wizard Driven » ; les CI découvrables arrivent par Discovery, ACC, Service Mapping, ETL ou connecteurs.",
+    "analogie": "Les stations et recettes se déclarent à la main ; l'inspecteur ne peut pas les « voir »."
+  },
+  {
+    "id": "q-ingestion-via-ire-2",
+    "theme": "configurer-cmdb",
+    "notion": "ingestion-via-ire",
+    "question": "Quel outil le schéma associe-t-il aux ordinateurs (Computers) ?",
+    "choix": [
+      "Agent Client Collector",
+      "Service Mapping",
+      "IntegrationHub ETL",
+      "Service Graph Connectors"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Computers → Agent Client Collector ; 3rd Party API → Service Graph Connectors ; Imports → IntegrationHub ETL.",
+    "analogie": "Le capteur posé sur chaque ordinateur."
+  },
+  {
+    "id": "q-ingestion-via-ire-3",
+    "theme": "configurer-cmdb",
+    "notion": "ingestion-via-ire",
+    "question": "Quel outil alimente les liens entre Application Services et CI ?",
+    "choix": [
+      "Service Mapping",
+      "Discovery",
+      "Unified Map",
+      "CI Class Manager"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "« Application Service to CI mappings » → Service Mapping. Unified Map est un outil de visualisation (gestion), pas de chargement.",
+    "analogie": "Le plan qui dit quel équipement sert quelle station."
+  },
+  {
+    "id": "q-ingestion-via-ire-4",
+    "theme": "configurer-cmdb",
+    "notion": "ingestion-via-ire",
+    "question": "Quelles sources le schéma indique-t-il pour les Foundation data ? (plusieurs réponses)",
+    "choix": [
+      "LDAP",
+      "Active Directory",
+      "Sources tierces (3rd party)",
+      "Discovery"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Foundation data (locations, groups, users) : LDAP, Active Directory, 3rd party.",
+    "analogie": "Le registre du personnel vient de l'annuaire, pas de l'inspecteur des équipements."
   }
 ]

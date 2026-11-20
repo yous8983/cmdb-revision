@@ -1,5 +1,10 @@
 # Changelog
 
+## [v5] – 2026-11-20
+- Thème « Configurer la CMDB » (leçon 2/8) : IRE (rôle et 3 cas d'usage) et alimentation de la CMDB via l'IRE (quelle source pour quels CI). 2 notions, 7 questions.
+- Total : 4 thèmes, 29 notions, 90 questions.
+- CACHE_VERSION → 5.
+
 ## [v4] – 2026-11-20
 - Nouveau thème « Configurer la CMDB » (module Configure the CMDB, leçon 1/8) : CI Class Manager et création / extension de classes. 2 notions, 8 questions.
 - Notion « Classes et hiérarchie » complétée : l'application qui ajoute des classes est CMDB CI Class Models.

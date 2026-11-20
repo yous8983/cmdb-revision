@@ -690,5 +690,59 @@
       "Risques d'une nouvelle classe : licence, gouvernance, insight, doublon de classe."
     ],
     "source": "CMDB Fundamentals, module « Configure the CMDB », leçon 1/8 – encadré « Important » sur la création de classes — info manquante : recommandations pour supprimer une classe personnalisée (coupées)."
+  },
+  {
+    "id": "ire-cas-usage",
+    "theme": "configurer-cmdb",
+    "titre": "IRE (Identification and Reconciliation Engine) : rôle et cas d'usage",
+    "definition": "L'Identification and Reconciliation Engine (IRE) est un framework qui traite des payloads (paquets de données entrants) pour maintenir la CMDB : création de nouveaux CI et mise à jour des CI existants. Quand des données de nombreuses sources (Discovery, AWS, SCCM…) arrivent dans la CMDB, les attributs peuvent osciller d'une valeur à l'autre selon la dernière source qui a écrit : l'IRE est là pour l'éviter.",
+    "points_cles": [
+      "L'IRE traite des payloads pour créer de nouveaux CI ou mettre à jour des CI existants.",
+      "Problème sans IRE : plusieurs sources écrivent sur le même CI et les attributs « flappent » (oscillent) selon la source qui a fait la dernière mise à jour.",
+      "Objectif 1 : Reduce Duplicates (réduire les doublons).",
+      "Objectif 2 : Decrease Undesired Updates to CIs (réduire les mises à jour non désirées des CI).",
+      "Objectif 3 : Stop Attribute Flapping (arrêter l'oscillation des attributs)."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le contrôleur à la porte de la réserve. Quand un four est livré, il vérifie s'il est déjà dans le registre (pas de doublon) et décide quel fournisseur a le droit de modifier quelle case de la fiche, pour que le fournisseur A et le fournisseur B ne réécrivent pas la puissance du four chacun leur tour.",
+      "fonction": "Garder une seule fiche par équipement et des valeurs stables, même avec de nombreuses sources.",
+      "limite": "Le détail des mécanismes (règles d'identification, de réconciliation, fonctionnalités de l'IRE) n'est pas encore capturé : l'analogie ne dit pas COMMENT le contrôleur décide."
+    },
+    "pieges_examen": [
+      "Les 3 objectifs : Reduce Duplicates, Decrease Undesired Updates to CIs, Stop Attribute Flapping.",
+      "Attribute flapping = valeur qui alterne selon la dernière source ayant écrit.",
+      "L'IRE crée de nouveaux CI ET met à jour les CI existants."
+    ],
+    "source": "CMDB Fundamentals, module « Configure the CMDB », leçon 2/8 – « IRE use cases » — info manquante : section « IRE features » (coupée)."
+  },
+  {
+    "id": "ingestion-via-ire",
+    "theme": "configurer-cmdb",
+    "titre": "Alimenter la CMDB via l'IRE : quelle source pour quels CI",
+    "definition": "Le schéma « Ingesting data into the CMDB via the IRE » montre par quel moyen chaque type de CI arrive dans la CMDB, en passant par le moteur IRE, et quels outils de gestion s'appuient ensuite sur la CMDB.",
+    "points_cles": [
+      "CI logiques (Business Applications, Application Services, Services, Service Offerings) → création guidée par assistant (Wizard Driven).",
+      "Imports → IntegrationHub ETL.",
+      "Liens Application Service ↔ CI → Service Mapping.",
+      "Serveurs, équipements réseau, applications, ressources cloud… → Discovery.",
+      "Ordinateurs (Computers) → Agent Client Collector.",
+      "API tierces (3rd Party API) → Service Graph Connectors.",
+      "Toutes ces sources passent par l'IRE Engine avant la CMDB.",
+      "Foundation data (localisations, groupes, utilisateurs) : sources LDAP, Active Directory, tierces.",
+      "Outils de gestion : CMDB Workspace, CI Class Manager, CMDB/CSDM Dashboards, CMDB Health Dashboard, Unified Map, Query Builder, Data Manager."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Chaque type de livraison a sa porte : les stations et les recettes (CI logiques) sont déclarées à la main avec un assistant ; l'inspecteur fait le tour des équipements (Discovery) ; un capteur posé sur chaque ordinateur remonte ses infos (Agent Client Collector) ; le plan des stations dit quel équipement sert quelle station (Service Mapping) ; les fournisseurs envoient leurs bons (Service Graph Connectors) ; les cartons importés passent par la cuisine de préparation (IntegrationHub ETL). Tous passent par le contrôleur (IRE). Le registre du personnel et des adresses vient de l'annuaire (LDAP, Active Directory).",
+      "fonction": "Savoir quel outil alimente quel type de CI.",
+      "limite": "Sur le schéma, les Foundation data sont reliées à la CMDB sans passer par la case IRE ; et ce schéma ne montre pas les Import Sets, qui, eux, ne passent pas par l'IRE par défaut (leçon 7)."
+    },
+    "pieges_examen": [
+      "CI logiques = Wizard Driven (pas découverts automatiquement).",
+      "Computers = Agent Client Collector ; 3rd Party API = Service Graph Connectors ; Application Service to CI mappings = Service Mapping ; Imports = IntegrationHub ETL.",
+      "Foundation data : LDAP, Active Directory, sources tierces."
+    ],
+    "source": "CMDB Fundamentals, module « Configure the CMDB », leçon 2/8 – schéma « Ingesting data into the CMDB via the IRE »"
   }
 ]
