@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "plateforme-servicenow",
+    "titre": "Plateforme ServiceNow",
+    "description": "Bases de la plateforme (cours Welcome to ServiceNow). Contenu partiel : les 3 cartes « capabilities and services » restent à capturer.",
+    "analogie_fil_rouge": "La plateforme est une maison : le schéma de données flexible forme les fondations et la charpente, l'interface web configurable est l'aménagement intérieur qu'on modifie sans toucher aux murs porteurs."
+  },
+  {
+    "id": "cmdb-csdm",
+    "titre": "Introduction à la CMDB et au CSDM",
+    "description": "Cours CMDB Fundamentals, leçons 2 à 4 : modèle CSDM, applications, classes, références, attributs, Asset vs CI et cycles de vie.",
+    "analogie_fil_rouge": "La CMDB est le registre d'un restaurant. Foundation Data = registre administratif (personnel, adresses, contrats) ; Infrastructure Data = équipements (fours, frigos, caisse) ; références = étiquettes collées sur un équipement qui renvoient au registre ; relations = branchements réels entre équipements. Côté client : la carte et ses formules (Business Service / Offering). Côté cuisine : la maintenance interne (Technology Management Service). La recette (Business Application) n'est pas la station qui la produit ce soir (Application Service / Service Instance), ni le four installé (Application)."
+  }
+]

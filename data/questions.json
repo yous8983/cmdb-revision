@@ -1,1 +1,352 @@
-[]
+[
+  {
+    "id": "q-plateforme-interface-schema-1",
+    "theme": "plateforme-servicenow",
+    "notion": "plateforme-interface-schema",
+    "question": "Sur quoi l'interface utilisateur web configurable de ServiceNow est-elle construite ?",
+    "choix": ["Un schéma de données flexible", "Un fichier de configuration par utilisateur", "Une base de données figée par client", "Un CDN externe"],
+    "bonnes_reponses": [0],
+    "explication": "ServiceNow fournit ses services via une interface web configurable, construite au-dessus d'un schéma de données flexible (des données organisées).",
+    "analogie": "L'aménagement intérieur repose sur les fondations et la charpente de la maison."
+  },
+  {
+    "id": "q-plateforme-interface-schema-2",
+    "theme": "plateforme-servicenow",
+    "notion": "plateforme-interface-schema",
+    "question": "Quels qualificatifs le cours associe-t-il à chaque couche ? (plusieurs réponses)",
+    "choix": ["Interface web « configurable »", "Schéma de données « flexible »", "Interface web « figée »", "Schéma de données « propriétaire du client »"],
+    "bonnes_reponses": [0, 1],
+    "explication": "Le cours parle d'une configurable web-based user interface et d'un flexible data schema.",
+    "analogie": "On réaménage les pièces (configurable) ; on peut agrandir la maison sur ses fondations (flexible)."
+  },
+
+  {
+    "id": "q-csdm-foundation-vs-infrastructure-1",
+    "theme": "cmdb-csdm",
+    "notion": "csdm-foundation-vs-infrastructure",
+    "question": "À quoi sert le modèle de données (CSDM) selon le cours ? (plusieurs réponses)",
+    "choix": ["Déterminer où enregistrer les éléments dans la CMDB", "Identifier les relations importantes pour apporter de la valeur métier", "Remplacer Discovery pour collecter les CI", "Calculer le coût des assets"],
+    "bonnes_reponses": [0, 1],
+    "explication": "Le data model aide à déterminer où enregistrer les éléments dans la CMDB et quelles relations comptent pour la valeur métier.",
+    "analogie": "Le plan d'organisation du restaurant dit dans quel registre noter chaque chose et quels branchements surveiller."
+  },
+  {
+    "id": "q-csdm-foundation-vs-infrastructure-2",
+    "theme": "cmdb-csdm",
+    "notion": "csdm-foundation-vs-infrastructure",
+    "question": "Comment les Infrastructure Data sont-elles liées aux Foundation Data sur le schéma CMDB / CSDM ?",
+    "choix": ["Par des références (references)", "Par des relations CI (relationships)", "Par héritage de classe", "Elles ne sont pas liées"],
+    "bonnes_reponses": [0],
+    "explication": "La flèche entre Infrastructure Data et Foundation Data est étiquetée REFERENCES ; les RELATIONSHIPS lient les éléments d'infrastructure entre eux.",
+    "analogie": "L'étiquette sur le four renvoie au registre (référence) ; le tuyau de gaz le relie à un autre équipement (relation)."
+  },
+  {
+    "id": "q-csdm-foundation-vs-infrastructure-3",
+    "theme": "cmdb-csdm",
+    "notion": "csdm-foundation-vs-infrastructure",
+    "question": "Lesquels font partie des Foundation Data ? (plusieurs réponses)",
+    "choix": ["Locations", "Users", "Servers", "Contracts", "Databases"],
+    "bonnes_reponses": [0, 1, 3],
+    "explication": "Foundation Data : Groups, Contracts, Product Models, Company, Business Units, Departments, Locations, Users, Processes. Servers et Databases sont des Infrastructure Data.",
+    "analogie": "Le registre administratif (adresses, personnel, contrats) n'est pas un équipement de cuisine."
+  },
+
+  {
+    "id": "q-csdm-5-domaines-1",
+    "theme": "cmdb-csdm",
+    "notion": "csdm-5-domaines",
+    "question": "Dans le CSDM 5, dans quel domaine se trouve la Business Application ?",
+    "choix": ["Design & Planning", "Service Delivery", "Service Consumption", "Foundation"],
+    "bonnes_reponses": [0],
+    "explication": "Design & Planning contient Business Capability, Business Application et Information Object.",
+    "analogie": "La recette s'écrit au moment de la conception du menu, pas pendant le service."
+  },
+  {
+    "id": "q-csdm-5-domaines-2",
+    "theme": "cmdb-csdm",
+    "notion": "csdm-5-domaines",
+    "question": "Quels éléments appartiennent au domaine Service Consumption ? (plusieurs réponses)",
+    "choix": ["Business Service", "Business Offering", "Technology Management Service", "Service Catalog", "SDLC Component"],
+    "bonnes_reponses": [0, 1, 3],
+    "explication": "Service Consumption : Business Service, Business Offering et le Catalog (Service, Product, Sales Catalog). Technology Management Service est en Service Delivery, SDLC Component en Build & Integration.",
+    "analogie": "La carte et les formules sont côté client ; la maintenance interne est côté cuisine."
+  },
+  {
+    "id": "q-csdm-5-domaines-3",
+    "theme": "cmdb-csdm",
+    "notion": "csdm-5-domaines",
+    "question": "Dans la légende du diagramme CSDM 5, que représente une flèche en pointillé ?",
+    "choix": ["Une référence (Reference)", "Une relation (Relationship)", "Un héritage de classe", "Un flux de données temps réel"],
+    "bonnes_reponses": [0],
+    "explication": "Légende : flèche pleine = Relationship, flèche pointillée = Reference.",
+    "analogie": "Le pointillé, c'est l'étiquette qui renvoie au registre ; le trait plein, c'est le vrai branchement."
+  },
+
+  {
+    "id": "q-business-app-vs-app-service-vs-application-1",
+    "theme": "cmdb-csdm",
+    "notion": "business-app-vs-app-service-vs-application",
+    "question": "Quel élément représente TOUS les environnements (Dev, Test, Prod) fournissant une fonction métier ?",
+    "choix": ["Business Application", "Application Service", "Application", "Dynamic CI Group"],
+    "bonnes_reponses": [0],
+    "explication": "La Business Application représente tous les environnements logiciels et d'infrastructure (Dev, Test, Prod) configurés pour fournir une fonction métier ; elle aide à la rationalisation.",
+    "analogie": "La recette couvre toutes ses versions : essai, dégustation, service du soir."
+  },
+  {
+    "id": "q-business-app-vs-app-service-vs-application-2",
+    "theme": "cmdb-csdm",
+    "notion": "business-app-vs-app-service-vs-application",
+    "question": "Quelle est la classe CMDB d'un Application Service ?",
+    "choix": ["cmdb_ci_service_auto", "cmdb_ci_business_app", "cmdb_ci_appl", "cmdb_ci_service"],
+    "bonnes_reponses": [0],
+    "explication": "Business Application = cmdb_ci_business_app ; Application Service = cmdb_ci_service_auto ; Application = cmdb_ci_appl.",
+    "analogie": "La station en service a sa propre fiche, distincte de la recette et du four."
+  },
+  {
+    "id": "q-business-app-vs-app-service-vs-application-3",
+    "theme": "cmdb-csdm",
+    "notion": "business-app-vs-app-service-vs-application",
+    "question": "Quel élément fait le pont entre la couche technique et la couche métier et peut modéliser des microservices par des relations parent/enfant ?",
+    "choix": ["Application Service", "Business Application", "Application", "Business Capability"],
+    "bonnes_reponses": [0],
+    "explication": "L'Application Service représente logiquement une pile applicative déployée, assure la livraison opérationnelle d'une business application et relie technique et métier.",
+    "analogie": "La station pizza assemble le four (technique) pour servir la recette (métier), et se découpe en sous-stations."
+  },
+
+  {
+    "id": "q-hierarchie-classes-1",
+    "theme": "cmdb-csdm",
+    "notion": "hierarchie-classes",
+    "question": "Dans la hiérarchie Configuration Item > Hardware > Computer > Server > Windows Server, quelle affirmation est vraie ?",
+    "choix": ["Server est le parent de Windows Server", "Windows Server est le parent de Server", "Computer est un enfant de Server", "Hardware est un enfant de Computer"],
+    "bonnes_reponses": [0],
+    "explication": "Les enfants sont des spécialisations de leur parent : Windows Server est un enfant de Server.",
+    "analogie": "Le four à pizza est un cas particulier de four, pas l'inverse."
+  },
+  {
+    "id": "q-hierarchie-classes-2",
+    "theme": "cmdb-csdm",
+    "notion": "hierarchie-classes",
+    "question": "Avec quels outils peut-on visualiser la structure des classes ? (plusieurs réponses)",
+    "choix": ["CI Class Manager", "Schema map", "Service Catalog", "Virtual Agent"],
+    "bonnes_reponses": [0, 1],
+    "explication": "La structure de classes se consulte dans le CI Class Manager ou le schema map de ServiceNow.",
+    "analogie": "Le classeur des catégories d'équipements, ou son plan d'ensemble."
+  },
+  {
+    "id": "q-hierarchie-classes-3",
+    "theme": "cmdb-csdm",
+    "notion": "hierarchie-classes",
+    "question": "Quelle est la bonne pratique recommandée pour les classes ?",
+    "choix": ["Garder des classes simples et utiliser les classes de base ServiceNow", "Créer une classe par type de matériel acheté", "Éviter toute sous-classe", "Mettre tous les CI dans cmdb_ci"],
+    "bonnes_reponses": [0],
+    "explication": "Le cours recommande des classes simples et l'usage des classes de base fournies par ServiceNow ; plus on descend, plus les CI sont spécialisés.",
+    "analogie": "Ranger dans les catégories du catalogue standard plutôt qu'inventer « four-à-pizza-au-bois-du-chef »."
+  },
+  {
+    "id": "q-hierarchie-classes-4",
+    "theme": "cmdb-csdm",
+    "notion": "hierarchie-classes",
+    "question": "Quelles classes sont des enfants directs de Hardware [cmdb_ci_hardware] dans la structure type du cours ? (plusieurs réponses)",
+    "choix": ["Network Gear [cmdb_ci_netgear]", "Computer [cmdb_ci_computer]", "Server [cmdb_ci_server]", "IP Router [cmdb_ci_ip_router]"],
+    "bonnes_reponses": [0, 1],
+    "explication": "Hardware → Network Gear (→ IP Router, IP Switch) et Hardware → Computer (→ Server → Windows / Linux Server).",
+    "analogie": "Sous « électroménager » : les appareils réseau et les appareils de calcul, puis leurs sous-catégories."
+  },
+
+  {
+    "id": "q-references-cmdb-ci-1",
+    "theme": "cmdb-csdm",
+    "notion": "references-cmdb-ci",
+    "question": "Quels champs de cmdb_ci font référence à sys_user_group ? (plusieurs réponses)",
+    "choix": ["Support group", "Assignment group", "Supported by", "Managed by", "Change control"],
+    "bonnes_reponses": [0, 1, 4],
+    "explication": "sys_user_group ← Assignment group, Change control, Support group. Supported by et Managed by pointent vers sys_user (des personnes).",
+    "analogie": "La case « équipe de maintenance » renvoie à la liste des équipes ; « responsable » renvoie à l'annuaire du personnel."
+  },
+  {
+    "id": "q-references-cmdb-ci-2",
+    "theme": "cmdb-csdm",
+    "notion": "references-cmdb-ci",
+    "question": "Vers quelle table pointent les champs Company, Manufacturer et Vendor d'un CI ?",
+    "choix": ["core_company", "sys_user_group", "cmn_location", "cmdb_model"],
+    "bonnes_reponses": [0],
+    "explication": "Les trois champs pointent vers la même table core_company : seul le rôle de l'entreprise change.",
+    "analogie": "Propriétaire, fabricant et fournisseur du four sont tous dans l'annuaire des entreprises."
+  },
+  {
+    "id": "q-references-cmdb-ci-3",
+    "theme": "cmdb-csdm",
+    "notion": "references-cmdb-ci",
+    "question": "Quelle table est référencée par le champ Asset d'un CI ?",
+    "choix": ["alm_asset", "cmdb_model", "cmn_schedule", "cmn_cost_center"],
+    "bonnes_reponses": [0],
+    "explication": "Asset → alm_asset ; Model ID → cmdb_model ; Maintenance schedule → cmn_schedule.",
+    "analogie": "La fiche du four renvoie à son dossier comptable."
+  },
+
+  {
+    "id": "q-foundation-data-relations-1",
+    "theme": "cmdb-csdm",
+    "notion": "foundation-data-relations",
+    "question": "Quelle table stocke l'appartenance d'un utilisateur à un groupe ?",
+    "choix": ["sys_user_grmember", "sys_user_has_role", "sys_group_has_role", "sys_user_role"],
+    "bonnes_reponses": [0],
+    "explication": "User et Group sont reliés par Group Member [sys_user_grmember].",
+    "analogie": "Le badge de membre de la brigade."
+  },
+  {
+    "id": "q-foundation-data-relations-2",
+    "theme": "cmdb-csdm",
+    "notion": "foundation-data-relations",
+    "question": "D'où peuvent venir les rôles d'un utilisateur (sys_user_has_role) d'après le schéma ? (plusieurs réponses)",
+    "choix": ["Des rôles de ses groupes (sys_group_has_role)", "D'un rôle attribué directement (sys_user_role)", "De sa localisation (cmn_location)", "De son centre de coûts"],
+    "bonnes_reponses": [0, 1],
+    "explication": "User Roles est alimentée par Roles (attribution directe) et par Group Roles. Le cours précise que les groupes doivent contenir les rôles appropriés.",
+    "analogie": "Les clés viennent de la brigade… ou, exceptionnellement, d'une remise en main propre."
+  },
+  {
+    "id": "q-foundation-data-relations-3",
+    "theme": "cmdb-csdm",
+    "notion": "foundation-data-relations",
+    "question": "Quelles tables de base ont une hiérarchie « Parent » sur le schéma ? (plusieurs réponses)",
+    "choix": ["Location", "Company", "Group", "Building", "User"],
+    "bonnes_reponses": [0, 1, 2],
+    "explication": "Location, Cost Center, Company, Department et Group ont une flèche Parent qui revient sur elles-mêmes. Building et User n'en ont pas.",
+    "analogie": "France > Paris > 12 rue X ; Groupe > Filiale ; Brigade > Équipe pâtisserie."
+  },
+
+  {
+    "id": "q-asset-vs-ci-1",
+    "theme": "cmdb-csdm",
+    "notion": "asset-vs-ci",
+    "question": "Lesquels sont à la fois asset et CI selon le diagramme ? (plusieurs réponses)",
+    "choix": ["Physical Server", "Virtual Server", "Router", "Software License", "Printers"],
+    "bonnes_reponses": [0, 2, 4],
+    "explication": "Les deux : Personal Computers, Printers, Router, Switch, Physical Server, On Prem Datacenter. Virtual Server = CI seulement ; Software License = asset seulement.",
+    "analogie": "Le four est acheté (compta) et branché (cuisine) ; le site de réservation tourne sans facture d'achat propre."
+  },
+  {
+    "id": "q-asset-vs-ci-2",
+    "theme": "cmdb-csdm",
+    "notion": "asset-vs-ci",
+    "question": "Lequel est un asset SANS être un CI ?",
+    "choix": ["Consumables", "Database", "Web Sites", "Switch"],
+    "bonnes_reponses": [0],
+    "explication": "Asset seulement : Contracts, Consumables, Software License, Buildings.",
+    "analogie": "La farine passe par la compta, mais ne « tourne » pas en cuisine comme un équipement."
+  },
+  {
+    "id": "q-asset-vs-ci-3",
+    "theme": "cmdb-csdm",
+    "notion": "asset-vs-ci",
+    "question": "Quelle vue correspond au CI ?",
+    "choix": ["Opérationnelle (usage)", "Financière", "Contractuelle", "Comptable"],
+    "bonnes_reponses": [0],
+    "explication": "Le diagramme oppose Financial (Assets) et Operational (CIs).",
+    "analogie": "La cuisine (comment ça fonctionne) contre la compta (combien ça coûte)."
+  },
+
+  {
+    "id": "q-attributs-critiques-1",
+    "theme": "cmdb-csdm",
+    "notion": "attributs-critiques",
+    "question": "Lesquels sont des attributs NON découvrables ? (plusieurs réponses)",
+    "choix": ["Support Group", "Serial Number", "Approval Group", "IP Address", "Managed By Group"],
+    "bonnes_reponses": [0, 2, 4],
+    "explication": "Non découvrables : Support Group, Approval Group, Managed By Group, Change Group. Serial Number et IP Address sont découvrables.",
+    "analogie": "On lit le numéro de série sur la plaque ; on doit demander qui dépanne l'appareil."
+  },
+  {
+    "id": "q-attributs-critiques-2",
+    "theme": "cmdb-csdm",
+    "notion": "attributs-critiques",
+    "question": "Comment s'appelait auparavant le Change Group ?",
+    "choix": ["Assignment group", "Support group", "Approval group", "Managed by group"],
+    "bonnes_reponses": [0],
+    "explication": "Le cours indique « Change Group (formerly Assignment group) ».",
+    "analogie": "Même équipe, nouveau nom sur la porte."
+  },
+  {
+    "id": "q-attributs-critiques-3",
+    "theme": "cmdb-csdm",
+    "notion": "attributs-critiques",
+    "question": "Pourquoi éviter les attributs personnalisés ? (plusieurs réponses)",
+    "choix": ["Ils nuisent souvent à la santé de la CMDB", "Ils créent de la dette technique", "Ils empêchent Discovery de fonctionner", "Ils sont interdits par ServiceNow"],
+    "bonnes_reponses": [0, 1],
+    "explication": "Le cours recommande les attributs de base de chaque classe : les attributs custom mènent souvent à une mauvaise santé de la CMDB et à de la dette technique.",
+    "analogie": "La case « couleur préférée du chef » sur toutes les fiches : personne ne la remplit et elle encombre."
+  },
+  {
+    "id": "q-attributs-critiques-4",
+    "theme": "cmdb-csdm",
+    "notion": "attributs-critiques",
+    "question": "Que faire des CI auxquels il manque des attributs non découvrables ?",
+    "choix": ["Assigner des tâches aux utilisateurs et groupes appropriés pour compléter", "Les supprimer de la CMDB", "Relancer Discovery jusqu'à ce qu'ils soient remplis", "Créer des attributs personnalisés"],
+    "bonnes_reponses": [0],
+    "explication": "On identifie les CI incomplets et on assigne des tâches aux bons utilisateurs et groupes pour ajouter les données manquantes : Discovery ne peut pas les trouver.",
+    "analogie": "On ne lira jamais « équipe de dépannage » sur le four : il faut le demander aux gens."
+  },
+
+  {
+    "id": "q-asset-vs-configuration-management-1",
+    "theme": "cmdb-csdm",
+    "notion": "asset-vs-configuration-management",
+    "question": "Quelles étapes appartiennent au cycle de vie de l'ASSET ? (plusieurs réponses)",
+    "choix": ["Procure", "Tagging", "Break / Fix", "Receive", "Upgrade"],
+    "bonnes_reponses": [0, 1, 3],
+    "explication": "Cycle de l'asset : Requirement, Request, Approval, Procure, Receive, Tagging, Storage, Deploy. Break / Fix et Upgrade sont dans le cycle opérationnel.",
+    "analogie": "Acheter, réceptionner, étiqueter : c'est la compta ; réparer et améliorer : c'est la cuisine."
+  },
+  {
+    "id": "q-asset-vs-configuration-management-2",
+    "theme": "cmdb-csdm",
+    "notion": "asset-vs-configuration-management",
+    "question": "Que permet une gestion conjointe de la Configuration Management et de l'IT Asset Management ? (plusieurs réponses)",
+    "choix": ["Une vue globale de l'infrastructure IT", "L'efficacité opérationnelle", "La responsabilité financière", "La suppression du besoin de Discovery"],
+    "bonnes_reponses": [0, 1, 2],
+    "explication": "Le cours : vue holistique de l'infrastructure, efficacité opérationnelle et responsabilité financière.",
+    "analogie": "Le gérant voit à la fois la compta et la cuisine."
+  },
+
+  {
+    "id": "q-cycle-vie-asset-ci-1",
+    "theme": "cmdb-csdm",
+    "notion": "cycle-vie-asset-ci",
+    "question": "À partir de quelle phase la gestion de la CMDB (CMDB Mgmt) intervient-elle ?",
+    "choix": ["Deploy", "Purchase", "Inventory", "Ideation"],
+    "bonnes_reponses": [0],
+    "explication": "Ideation = Strategic Portfolio Mgmt, Purchase = Procurement, Inventory = Asset Mgmt ; Deploy et Operational = Asset Mgmt + CMDB Mgmt.",
+    "analogie": "Un four n'entre dans le registre des branchements qu'une fois installé, pas quand il n'est qu'un bon de commande."
+  },
+  {
+    "id": "q-cycle-vie-asset-ci-2",
+    "theme": "cmdb-csdm",
+    "notion": "cycle-vie-asset-ci",
+    "question": "Quels statuts correspondent à la phase Missing ? (plusieurs réponses)",
+    "choix": ["Lost", "Stolen", "Disposed", "Pending Repair"],
+    "bonnes_reponses": [0, 1],
+    "explication": "Missing (depuis Operational) : Lost, Stolen. Disposed est en End of Life ; Pending Repair en Inventory.",
+    "analogie": "On ne perd ou ne se fait voler que le four qui était en service."
+  },
+  {
+    "id": "q-cycle-vie-asset-ci-3",
+    "theme": "cmdb-csdm",
+    "notion": "cycle-vie-asset-ci",
+    "question": "Quels statuts de fin de vie sont marqués « CI » sur le schéma ? (plusieurs réponses)",
+    "choix": ["Obsolete", "RMA", "Sold", "Donated"],
+    "bonnes_reponses": [0, 1],
+    "explication": "End of Life : Disposed, Donated, In Transit, Pending Disposal, Sold, Vendor Credit, Obsolete – CI, RMA – CI.",
+    "analogie": "Retiré du service (obsolète) ou renvoyé au fabricant (RMA) : ça concerne le registre de la cuisine."
+  },
+  {
+    "id": "q-cycle-vie-asset-ci-4",
+    "theme": "cmdb-csdm",
+    "notion": "cycle-vie-asset-ci",
+    "question": "Quels statuts appartiennent à la phase Operational ? (plusieurs réponses)",
+    "choix": ["In Use", "In Maintenance", "On Order", "Available"],
+    "bonnes_reponses": [0, 1],
+    "explication": "Operational : In Use, In Maintenance. On Order = Purchase ; Available = Inventory.",
+    "analogie": "Le four est soit en train de cuire, soit en réparation."
+  }
+]

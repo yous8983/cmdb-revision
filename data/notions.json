@@ -1,1 +1,276 @@
-[]
+[
+  {
+    "id": "plateforme-interface-schema",
+    "theme": "plateforme-servicenow",
+    "titre": "Interface configurable et schéma de données flexible",
+    "definition": "ServiceNow fournit ses services aux utilisateurs via une interface utilisateur web configurable (configurable web-based user interface), construite au-dessus d'un schéma de données flexible (flexible data schema, c'est-à-dire des données organisées).",
+    "points_cles": [
+      "Deux couches : l'interface web (ce que voit l'utilisateur) et le schéma de données (comment les données sont organisées).",
+      "L'interface est « configurable » ; le schéma est « flexible ».",
+      "L'infrastructure de la plateforme soutient le développement et la gestion d'applications."
+    ],
+    "analogie": {
+      "univers": "maison",
+      "image": "Le schéma de données = les fondations et la charpente ; l'interface web = l'aménagement intérieur (meubles, déco).",
+      "fonction": "On réaménage les pièces (formulaires, listes) sans toucher aux murs porteurs : tout repose sur la même base commune.",
+      "limite": "Une maison a des fondations figées ; le schéma ServiceNow évolue souvent (nouvelles tables, nouveaux champs). « Fondations » veut dire base commune, pas immuable."
+    },
+    "pieges_examen": [
+      "« Flexible » qualifie le schéma de données, « configurable » qualifie l'interface web."
+    ],
+    "source": "Welcome to ServiceNow – ServiceNow AI Platform capabilities and services (photo du 20/11) — info manquante : contenu des 3 cartes (outils, utilisateurs, cloud) et fin du paragraphe."
+  },
+  {
+    "id": "csdm-foundation-vs-infrastructure",
+    "theme": "cmdb-csdm",
+    "titre": "CSDM : Foundation Data vs Infrastructure Data",
+    "definition": "Le modèle de données (Common Service Data Model, CSDM) aide à déterminer où enregistrer les éléments dans la CMDB et quelles relations sont importantes pour apporter de la valeur métier. Il distingue les Foundation Data (données de base) et les Infrastructure Data (les éléments techniques).",
+    "points_cles": [
+      "Foundation Data : Groups, Contracts, Product Models, Company, Business Units, Departments, Locations, Users, Processes.",
+      "Infrastructure Data : Network Gear, Servers, Applications, Application Service, Databases, Cloud Resources, Dynamic CI Groups, Printers, End Points.",
+      "Les Infrastructure Data font RÉFÉRENCE (references) aux Foundation Data.",
+      "Les éléments d'infrastructure sont liés entre eux par des RELATIONS (relationships).",
+      "Au-dessus : les Business Applications, puis la couche Common Service Data : Business Services et Business Service Offerings, Application Services, Technology Management Services et Technology Management Service Offerings."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Foundation Data = le registre administratif (personnel, adresse, contrats). Infrastructure Data = les équipements (fours, frigos, caisse). Une référence = l'étiquette collée sur le four : « cuisine de Paris, entretenu par l'équipe X ». Une relation = le branchement réel du four au gaz.",
+      "fonction": "Distinguer ce à quoi un équipement renvoie (son contexte administratif) de ce à quoi il est réellement branché (ses dépendances techniques : si le gaz tombe, on sait quel four s'arrête).",
+      "limite": "Au restaurant on voit l'étiquette et le tuyau ; à l'examen, seul compte le vocabulaire exact : « references » vers la Foundation, « relationships » entre éléments d'infrastructure."
+    },
+    "pieges_examen": [
+      "Les Foundation Data sont RÉFÉRENCÉES, elles ne sont pas « reliées » par des relationships.",
+      "Le CSDM répond à deux questions : OÙ enregistrer un élément, et QUELLES relations comptent pour la valeur métier."
+    ],
+    "source": "CMDB Fundamentals, leçon 2/9 Introduction to the CMDB – diagramme « CMDB and Common Service Data Model »"
+  },
+  {
+    "id": "csdm-5-domaines",
+    "theme": "cmdb-csdm",
+    "titre": "CSDM 5 : les domaines du modèle",
+    "definition": "Le diagramme Common Service Data Model 5.0 range les éléments en domaines : Foundation, Ideation & Strategy, Design & Planning, Build & Integration, Service Delivery et Service Consumption, avec Manage Portfolio au centre. Chaque domaine a ses personas (rôles responsables).",
+    "points_cles": [
+      "Ideation & Strategy : Product Idea → Planning Item.",
+      "Design & Planning : Business Capability, Business Application, Information Object (personas : Enterprise Architect, Digital Product Owner).",
+      "Build & Integration : DevOps Change Data Model, Subsystems / SDLC Component (persona : Teams).",
+      "Service Delivery : Service Instance, Technology Management Service, Technology Management Offering, Dynamic CI Group, Service Delivery System (personas : Service Instance Owner, Service Delivery Owner, Service Provider).",
+      "Service Consumption : Business Service, Business Offering, Catalog = Service Catalog, Product Catalog, Sales Catalog (personas : Business Relationship Manager, Customer Service Manager).",
+      "Foundation : Product Model, Product Feature, SBOM, Location, Team / Group / User, Company / Business Unit / Department, Value Stream, Business Process, Contract, CMDB Group, Life Cycle, Knowledge (personas : Product Owner, Data Steward, Chief Strategist, Process Owner, Contract Manager).",
+      "Légende : flèche pleine = Relationship, flèche pointillée = Reference."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Ideation = l'idée d'un nouveau plat puis son inscription au planning. Design = le savoir-faire, la recette et ses ingrédients. Build = l'atelier qui monte et modifie le matériel. Service Delivery = la cuisine en marche ce soir et le service interne de maintenance. Service Consumption = la carte et les formules que le client commande. Foundation = le registre administratif.",
+      "fonction": "Situer chaque élément à la bonne étape : de l'idée jusqu'à ce que le client consomme.",
+      "limite": "Un restaurant a peu de niveaux ; le CSDM chaîne beaucoup d'éléments. L'analogie sert à trouver le bon domaine, pas à deviner les relations exactes entre éléments."
+    },
+    "pieges_examen": [
+      "Business Application est en Design & Planning ; Service Instance est en Service Delivery.",
+      "Business Service et Business Offering = Service Consumption ; Technology Management Service et Offering = Service Delivery.",
+      "La case que ce diagramme CSDM 5 appelle Service Instance est appelée Application Service dans d'autres schémas du cours : savoir reconnaître les deux noms."
+    ],
+    "source": "CMDB Fundamentals, leçon 2/9 – diagramme « Common Service Data Model 5.0 » — info manquante : persona du domaine Ideation & Strategy illisible."
+  },
+  {
+    "id": "business-app-vs-app-service-vs-application",
+    "theme": "cmdb-csdm",
+    "titre": "Business Application vs Application Service vs Application",
+    "definition": "Trois termes distincts de la CMDB et du Service Mapping. Business Application : représente tous les environnements logiciels et d'infrastructure (Dev, Test, Prod) configurés pour fournir une fonction métier. Application Service : type de service qui représente logiquement une pile applicative déployée. Application : tout programme, module ou groupe de programmes déployé sur une infrastructure de calcul pour fournir une fonction précise (« les bits et octets installés »).",
+    "points_cles": [
+      "Business Application [cmdb_ci_business_app] : relie l'IT aux résultats métier, soutient les business capabilities, aide à repérer les pistes de rationalisation, d'optimisation ou de modernisation.",
+      "Application Service [cmdb_ci_service_auto] : livraison opérationnelle d'UNE business application précise ; fait le pont entre la couche technique et la couche métier ; peut avoir des relations parent/enfant (microservices, déploiements de plateforme).",
+      "Application [cmdb_ci_appl] : composants logiciels techniques ; base des application services."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Business Application = la recette « pizza margherita » du livre de recettes, toutes versions confondues (essai, dégustation, service). Application Service = la station pizza qui tourne ce soir (four + plan de travail + pizzaïolo), découpable en sous-stations. Application = le four lui-même, installé et branché.",
+      "fonction": "La recette se décrit, la station tourne, le four s'installe. C'est sur la recette qu'on se demande « a-t-on trop de pizzas qui se ressemblent ? » (rationalisation).",
+      "limite": "Un four peut servir plusieurs recettes : ne déduisez pas de cardinalité exacte de l'analogie. Seule certitude du cours : la Business Application couvre tous les environnements (Dev, Test, Prod)."
+    },
+    "pieges_examen": [
+      "Business Application = TOUS les environnements (Dev, Test, Prod) ; Application Service = une pile déployée précise.",
+      "L'Application Service est la couche intermédiaire, le pont entre technique et métier.",
+      "Classes à connaître : cmdb_ci_business_app, cmdb_ci_service_auto, cmdb_ci_appl."
+    ],
+    "source": "CMDB Fundamentals, leçon 3/9 – « Differentiating applications », onglets Description, Scope, CMDB Class — info manquante : onglets Key Details, Creation Method, Relationships, Examples, Key Reference Data."
+  },
+  {
+    "id": "hierarchie-classes",
+    "theme": "cmdb-csdm",
+    "titre": "Classes et hiérarchie parent / enfant",
+    "definition": "La CMDB est organisée par une structure de classes : chaque classe est une catégorie prédéfinie et standardisée qui contient des CI similaires (ex. Servers). Une classe peut se diviser en sous-classes par relations parent-enfant : les enfants sont des spécialisations de leur parent.",
+    "points_cles": [
+      "Exemple de hiérarchie : Configuration Item > Hardware > Computer > Server > Windows Server.",
+      "Server est le parent de Windows Server ; Windows Server est un enfant de Server (Linux Server aussi).",
+      "Structure type : cmdb_ci → Hardware [cmdb_ci_hardware] → Network Gear [cmdb_ci_netgear] → IP Router [cmdb_ci_ip_router] et IP Switch [cmdb_ci_ip_switch].",
+      "Et : Hardware → Computer [cmdb_ci_computer] → Server [cmdb_ci_server] → Windows Server [cmdb_ci_win_server] et Linux Server [cmdb_ci_linux_server].",
+      "On visualise la structure avec le CI Class Manager ou le schema map de ServiceNow.",
+      "Bonne pratique : garder des classes simples et utiliser les classes de base fournies par ServiceNow. Plus on descend dans la hiérarchie, plus les CI sont spécialisés.",
+      "Une application peut être installée sur l'instance pour obtenir de nombreuses classes supplémentaires, absentes d'une instance de base."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Équipement > Électroménager > Appareil de cuisson > Four > Four à pizza. Le four à pizza a tout ce qu'a un four, plus ses propres caractéristiques.",
+      "fonction": "Chaque niveau hérite de son parent et se spécialise. Bonne pratique : ranger les appareils dans les catégories du catalogue standard plutôt que d'inventer « four-à-pizza-au-bois-du-chef ».",
+      "limite": "Dans ServiceNow chaque niveau est une vraie table au nom technique à connaître (cmdb_ci_server…), ce que l'analogie n'aide pas à retenir."
+    },
+    "pieges_examen": [
+      "Parent = plus général, enfant = plus spécialisé (Server → Windows Server).",
+      "Network Gear et Computer sont tous deux enfants de Hardware.",
+      "Outils de visualisation : CI Class Manager et schema map.",
+      "Privilégier les classes de base ServiceNow plutôt que d'en créer."
+    ],
+    "source": "CMDB Fundamentals, leçon 3/9 – « Class hierarchy view within CI Class Manager » et « CMDB sample class structure » — info manquante : nom de l'application qui ajoute des classes (début de phrase coupé)."
+  },
+  {
+    "id": "references-cmdb-ci",
+    "theme": "cmdb-csdm",
+    "titre": "Références de cmdb_ci vers les tables de base",
+    "definition": "La table de base des CI, cmdb_ci, contient des champs qui font référence aux tables de base (foundation tables) : utilisateurs, groupes, sociétés, centres de coûts, localisations, modèles, assets et calendriers.",
+    "points_cles": [
+      "sys_user ← Assigned to, Owned by, Managed by, Supported by (des PERSONNES).",
+      "sys_user_group ← Assignment group, Change control, Support group (des GROUPES).",
+      "core_company ← Company, Manufacturer, Vendor (la même table pour trois rôles).",
+      "cmn_cost_center ← Department (tel que dessiné dans le cours) ; cmn_location ← Location.",
+      "cmdb_model ← Model ID ; alm_asset ← Asset ; cmn_schedule ← Maintenance schedule."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "La fiche du four a des cases qui renvoient aux registres : responsable → annuaire du personnel ; équipe de maintenance → liste des équipes ; fabricant et fournisseur → annuaire des entreprises ; emplacement → plan des locaux ; modèle → catalogue du constructeur ; asset → dossier comptable ; entretien → calendrier.",
+      "fonction": "La fiche ne recopie pas les informations : elle POINTE vers le registre, qui reste la source unique.",
+      "limite": "Le schéma du cours place « Department » sous cmn_cost_center alors qu'une table cmn_department existe (schéma des Foundation data), et il écrit core_company là où l'autre schéma écrit cmn_company. Points ambigus : à vérifier."
+    },
+    "pieges_examen": [
+      "Support group = un GROUPE ; Supported by = une PERSONNE.",
+      "Company, Manufacturer et Vendor pointent tous vers core_company.",
+      "Le champ Asset relie le CI à son enregistrement alm_asset (lien Asset ↔ CI)."
+    ],
+    "source": "CMDB Fundamentals, leçon 3/9 – « CMDB base tables (Classes) and relationships to foundation tables » — ambiguïtés : Department / cmn_cost_center et core_company / cmn_company."
+  },
+  {
+    "id": "foundation-data-relations",
+    "theme": "cmdb-csdm",
+    "titre": "Relations entre Foundation Data (utilisateurs, groupes, rôles)",
+    "definition": "Les données de base sont liées entre elles : localisations, bâtiments, centres de coûts, sociétés, départements, utilisateurs, groupes et rôles. Les groupes doivent contenir les rôles appropriés.",
+    "points_cles": [
+      "Hiérarchie « Parent » (la table se référence elle-même) : Location, Cost Center, Company, Department, Group.",
+      "Location [cmn_location] → Building [cmn_building], Cost Center, Company, User.",
+      "Cost Center et Company → Department [cmn_department] ; Company et Department → User [sys_user].",
+      "User et Group [sys_user_group] → Group Member [sys_user_grmember] (table d'appartenance).",
+      "Roles [sys_user_role] → User Roles [sys_user_has_role] ; Group Roles [sys_group_has_role] → User Roles.",
+      "Les groupes doivent contenir les rôles appropriés."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Les clés (rôles) sont confiées à la brigade (groupe), pas à chaque cuisinier. Celui qui entre dans la brigade, avec son badge de membre (Group Member), reçoit automatiquement les clés ; s'il en sort, il les perd.",
+      "fonction": "Gérer les droits par équipe plutôt que personne par personne.",
+      "limite": "Le schéma montre aussi un lien direct Roles → User Roles : on PEUT donner un rôle directement à un utilisateur. L'analogie laisse croire que c'est impossible ; c'est seulement moins recommandé."
+    },
+    "pieges_examen": [
+      "L'appartenance utilisateur ↔ groupe est stockée dans sys_user_grmember.",
+      "Les rôles d'un utilisateur (sys_user_has_role) viennent de rôles directs ou des rôles de ses groupes (sys_group_has_role).",
+      "Location, Cost Center, Company, Department et Group ont un champ Parent (hiérarchies)."
+    ],
+    "source": "CMDB Fundamentals, leçon 3/9 – « Foundation data relationships » — info manquante : début du paragraphe au-dessus du schéma."
+  },
+  {
+    "id": "asset-vs-ci",
+    "theme": "cmdb-csdm",
+    "titre": "Asset vs CI",
+    "definition": "L'asset relève de la vue financière, le CI de la vue opérationnelle (usage des CI dans l'entreprise). Certains éléments ne sont que l'un ou l'autre ; d'autres peuvent être suivis à la fois comme CI et comme asset.",
+    "points_cles": [
+      "Asset seulement (financier) : Contracts, Consumables, Software License, Buildings.",
+      "Les deux : Personal Computers, Printers, Router, Switch, Physical Server, On Prem Datacenter.",
+      "CI seulement (opérationnel) : Applications, Database, Web Sites, Virtual Server, Dynamic CI Groups, Cloud Environments."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Asset seulement = ce qui passe par la compta sans « tourner » en cuisine : bail, farine et serviettes, licence du logiciel de caisse, local. Les deux = le four et la caisse : achetés ET en service, branchés à d'autres équipements. CI seulement = ce qui fonctionne sans facture d'achat propre : site de réservation, fichier clients.",
+      "fonction": "Séparer la question « combien ça coûte et à qui c'est ? » de la question « comment ça fonctionne et de quoi ça dépend ? ».",
+      "limite": "Au restaurant le four est un seul objet ; dans ServiceNow l'asset (alm_asset) et le CI (cmdb_ci) sont deux enregistrements distincts, liés par le champ Asset du CI."
+    },
+    "pieges_examen": [
+      "Physical Server = asset ET CI ; Virtual Server = CI seulement.",
+      "Software License et Consumables = asset seulement.",
+      "Database, Web Sites et Cloud Environments = CI seulement."
+    ],
+    "source": "CMDB Fundamentals, leçon 4/9 – diagramme « Asset vs. CI » — info manquante : début du paragraphe au-dessus du schéma."
+  },
+  {
+    "id": "attributs-critiques",
+    "theme": "cmdb-csdm",
+    "titre": "Attributs critiques : découvrables vs non découvrables",
+    "definition": "Les attributs critiques de la CMDB se répartissent entre attributs découvrables (renseignés automatiquement, par exemple par Discovery) et attributs non découvrables (à compléter). On identifie les CI auxquels il manque des attributs non découvrables et on assigne des tâches aux utilisateurs et groupes appropriés pour ajouter les données manquantes.",
+    "points_cles": [
+      "Découvrables : Name, Manufacturer, Model ID, Serial Number, Operating System, IP Address, Lifecycle Status and Stage (Operational Status), Location.",
+      "Non découvrables : Support Group, Approval Group, Managed By Group, Change Group (anciennement Assignment group).",
+      "Utiliser autant que possible les attributs système de base fournis avec chaque classe.",
+      "Créer des attributs personnalisés nuit souvent à la santé de la CMDB et crée de la dette technique."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Découvrable = ce qu'un inspecteur lit sur l'appareil : la plaque (marque, modèle, n° de série), l'endroit où il est, s'il est allumé. Non découvrable = QUI en répond : l'équipe qui le dépanne, qui valide les changements. Attribut personnalisé = ajouter une case « couleur préférée du chef » sur toutes les fiches.",
+      "fonction": "Ce qui se lit sur l'objet se collecte automatiquement ; ce qui concerne les responsabilités doit être demandé aux gens. Les cases inutiles encombrent et se vident.",
+      "limite": "Location est classée « découvrable » dans le cours alors qu'on ne la lit pas toujours sur un appareil : retenez la classification du cours."
+    },
+    "pieges_examen": [
+      "Tous les attributs non découvrables de la liste sont des GROUPES.",
+      "Change Group = ancien Assignment group.",
+      "Operational Status = Lifecycle Status and Stage.",
+      "Attributs personnalisés = mauvaise santé de la CMDB + dette technique."
+    ],
+    "source": "CMDB Fundamentals, leçon 3/9 – « Critical CMDB attributes » — info manquante : liste des actions « For each CI class that will be ingested… » (coupée)."
+  },
+  {
+    "id": "asset-vs-configuration-management",
+    "theme": "cmdb-csdm",
+    "titre": "Asset Management vs Configuration Management",
+    "definition": "Deux cycles de vie complémentaires : le cycle de vie de l'asset (Asset Management) et le cycle de vie opérationnel (Configuration Management, centré sur la CMDB). Bien gérer la Configuration Management et l'IT Asset Management donne une vue globale de l'infrastructure IT, avec efficacité opérationnelle et responsabilité financière.",
+    "points_cles": [
+      "Cycle de vie de l'asset : Requirement → Request → Approval → Procure → Receive → Tagging → Storage → Deploy.",
+      "Cycle de vie opérationnel : Redeploy → Billing → Configure → Break / Fix → Upgrade → Move → Uninstall → Storage → Redeploy, avec sortie vers Dispose.",
+      "Les deux boucles se rejoignent au déploiement (Deploy → Redeploy).",
+      "Objectif commun : efficacité opérationnelle ET responsabilité financière."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Côté compta (asset) : « il nous faut un 2e four » → demande → validation du budget → achat → livraison → étiquette d'inventaire → réserve → installation. Côté cuisine (CI) : il est réglé, tombe en panne et est réparé, est amélioré, change de place, est débranché, retourne en réserve, est réinstallé ailleurs… puis finit jeté.",
+      "fonction": "Distinguer les étapes administratives d'acquisition des étapes de vie opérationnelle de l'équipement.",
+      "limite": "Le schéma place Billing dans la boucle opérationnelle, près de la CMDB : ne l'associez pas automatiquement au côté « compta » de l'analogie."
+    },
+    "pieges_examen": [
+      "Request, Approval, Procure, Receive, Tagging = cycle de vie de l'ASSET.",
+      "Configure, Break / Fix, Upgrade, Move, Uninstall = cycle de vie OPÉRATIONNEL (Configuration Management).",
+      "Les deux gestions combinées = vue globale (efficacité opérationnelle + responsabilité financière)."
+    ],
+    "source": "CMDB Fundamentals, leçon 4/9 – schéma « Asset vs configuration management » — info manquante : contenu de l'audio qui suit."
+  },
+  {
+    "id": "cycle-vie-asset-ci",
+    "theme": "cmdb-csdm",
+    "titre": "Cycle de vie Asset et CI : phases et statuts",
+    "definition": "Un élément traverse des phases, chacune avec ses statuts et son processus responsable. Par exemple, une fois configuré, un serveur devient prêt pour le déploiement puis opérationnel ; en fin de vie, il peut être mis au rebut, donné ou vendu.",
+    "points_cles": [
+      "Ideation (Strategic Portfolio Mgmt) : Under Evaluation, Pilot.",
+      "Purchase (Procurement) : On Order, Pre-Allocated. Branche Design : Build.",
+      "Inventory (Asset Mgmt) : Available, Pending Repair, Pre-Allocated, Reserved.",
+      "Deploy (Asset Mgmt + CMDB Mgmt) : In Stock, In Transit, Pending Transfer, Reserved.",
+      "Operational (Asset Mgmt + CMDB Mgmt) : In Use, In Maintenance.",
+      "End of Life (Asset et CMDB Mgmt) : Disposed, Donated, In Transit, Pending Disposal, Sold, Vendor Credit, Obsolete – CI, RMA – CI.",
+      "Missing (depuis Operational) : Lost, Stolen. Defective (vers End of Life) : In Stock, In Transit."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le four est d'abord une idée à l'essai, puis commandé, stocké en réserve, livré et installé, en service ou en maintenance, et enfin jeté, donné ou revendu. Il peut aussi être perdu ou volé pendant son service, ou défectueux et renvoyé.",
+      "fonction": "Savoir à chaque étape qui s'en occupe : la CMDB n'intervient qu'une fois le four branché (Deploy), pas quand il n'est qu'un bon de commande.",
+      "limite": "Un four repasse rarement de « en service » à « en réserve » ; en IT la réaffectation (Redeploy, un PC remis à un autre employé) est courante."
+    },
+    "pieges_examen": [
+      "La CMDB (CMDB Mgmt) n'intervient qu'à partir de Deploy ; avant, c'est Strategic Portfolio Mgmt, Procurement et Asset Mgmt.",
+      "Un même statut existe dans plusieurs phases (Reserved, Pre-Allocated, In Stock, In Transit) : c'est la phase qui donne le sens.",
+      "Missing (Lost, Stolen) part de la phase Operational.",
+      "Obsolete et RMA sont des statuts de fin de vie marqués « CI »."
+    ],
+    "source": "CMDB Fundamentals, leçon 4/9 – schéma « Asset and CI lifecycle »"
+  }
+]
