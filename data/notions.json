@@ -272,5 +272,368 @@
       "Obsolete et RMA sont des statuts de fin de vie marqués « CI »."
     ],
     "source": "CMDB Fundamentals, leçon 4/9 – schéma « Asset and CI lifecycle »"
+  },
+  {
+    "id": "cas-usage-non-it",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Cas d'usage de la CMDB hors IT",
+    "definition": "La CMDB sert aussi en dehors de l'IT : partout où il faut tenir l'inventaire d'équipements, suivre leur état, leur maintenance et leurs dépendances.",
+    "points_cles": [
+      "Bâtiments : inventaire de l'infrastructure physique (HVAC, ascenseurs…) et planification de la maintenance préventive et corrective.",
+      "Santé : gestion des équipements médicaux et de diagnostic, conformité réglementaire, disponibilité des équipements critiques pour les patients.",
+      "Transport / logistique : gestion de flotte (véhicules, plannings de maintenance, état opérationnel) et équipements logistiques (chariots élévateurs, convoyeurs, stockage).",
+      "Industrie : équipements de production (machines, lignes de production) et optimisation de la chaîne d'approvisionnement.",
+      "Immobilier : gestion des biens (résidentiel, commercial, industriel) et des locataires (baux, demandes de maintenance).",
+      "Énergie : suivi des infrastructures (centrales, transformateurs, pipelines) et gestion de la maintenance."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le même registre qui suit les fours peut suivre la hotte et la climatisation, la camionnette de livraison, ou le local loué et son bail.",
+      "fonction": "Montrer que le principe « inventaire + état + maintenance + dépendances » ne dépend pas du type d'équipement.",
+      "limite": "Les intitulés des 6 tuiles n'ont pas été capturés : les domaines (bâtiments, santé, transport, industrie, immobilier, énergie) sont déduits de leur contenu."
+    },
+    "pieges_examen": [
+      "Les cas d'usage non IT reprennent les mêmes fonctions : inventaire, suivi d'état, maintenance préventive/corrective, conformité."
+    ],
+    "source": "CMDB Fundamentals, leçon 5/9 – « Non-IT related use cases » — info manquante : titres des tuiles, fins de phrases coupées, tuiles des cas d'usage IT (non retournées) et « Outcomes achieved by ServiceNow customers »."
+  },
+  {
+    "id": "etapes-cmdb-fiable",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Les 4 étapes vers une CMDB fiable",
+    "definition": "Quatre étapes aident à maximiser la valeur de la CMDB : 1. Fixer la direction (Set your direction) ; 2. Constituer une équipe et un modèle de gouvernance (Build a team and governance model) ; 3. Concevoir le modèle de données de service (Design your service data model) ; 4. Opérationnaliser et maintenir la CMDB (Operationalize and maintain your CMDB).",
+    "points_cles": [
+      "1. Set your direction.",
+      "2. Build a team and governance model.",
+      "3. Design your service data model.",
+      "4. Operationalize and maintain your CMDB.",
+      "Suivre ces étapes aide à maximiser la valeur de la CMDB, même si chaque organisation a ses besoins propres."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Ouvrir un restaurant : 1. choisir le concept ; 2. former le comité de direction et ses règles ; 3. dessiner le plan du registre ; 4. ouvrir et tenir le registre à jour au quotidien.",
+      "fonction": "Retenir l'ordre : on décide pourquoi et qui, avant de dessiner le modèle, avant d'exploiter.",
+      "limite": "Au restaurant on ouvre une fois ; la 4e étape d'une CMDB (maintenir) ne s'arrête jamais."
+    },
+    "pieges_examen": [
+      "Ordre : direction → équipe et gouvernance → modèle de données → exploitation et maintenance.",
+      "Concevoir le modèle de données vient APRÈS la gouvernance et AVANT l'exploitation."
+    ],
+    "source": "CMDB Fundamentals, leçon 6/9 – « Steps to a trustworthy CMDB »"
+  },
+  {
+    "id": "definir-direction",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Étape 1 : fixer la direction",
+    "definition": "Il faut des initiatives stratégiques avec des décisions de conception précoces pour déterminer les besoins de reporting AVANT, et non après, que les données soient chargées. Sans direction, « on construit l'avion en plein vol ».",
+    "points_cles": [
+      "What : que voulez-vous accomplir ?",
+      "How? : quels résultats métier la CMDB soutiendra-t-elle ? (libellé du cours)",
+      "Why? : quelle approche, quelles contraintes et hypothèses ? (libellé du cours)",
+      "Measure : comment savoir si vous êtes sur la bonne voie ?",
+      "Déterminer les besoins de reporting avant de peupler les données."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Choisir le concept du restaurant (pizzeria ? gastronomique ?) et les chiffres qu'on voudra suivre (couverts par jour, coût par plat) avant d'acheter les équipements et de remplir le registre.",
+      "fonction": "Si l'on sait d'avance quels rapports on veut, on note dès le départ les bonnes informations dans le registre.",
+      "limite": "Sur la capture, la question « quels résultats métier ? » est sous How? et « approche, contraintes, hypothèses » sous Why? : l'association semble inversée, retenez les libellés tels que le cours les présente."
+    },
+    "pieges_examen": [
+      "Besoins de reporting définis AVANT de peupler les données, pas après.",
+      "Sans direction = « construire l'avion en plein vol ».",
+      "Quatre volets : What, How, Why, Measure."
+    ],
+    "source": "CMDB Fundamentals, leçon 6/9 – « Set your direction »"
+  },
+  {
+    "id": "ccb-gouvernance",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Étape 2 : équipe et gouvernance, le Configuration Control Board (CCB)",
+    "definition": "Si un processus repose sur des données, elles doivent être exactes : l'inexactitude mène à l'isolement et à la sous-utilisation. On forme un Configuration Control Board (CCB), équipe qui veille à ce que la CMDB apporte une valeur continue : il fixe la direction, décide de ce qui est nécessaire pour soutenir les initiatives stratégiques et détermine si la CMDB est prête à être utilisée.",
+    "points_cles": [
+      "Structure : CCB Chair, Configuration Management Process Owner, Full / Guest CCB Members.",
+      "CM Executive Sponsor et CCB Process Owner (Senior Executive) : supervise l'impact du plan de gestion de configuration dans tous les départements.",
+      "CM Process Owner et CCB Chair (Senior Manager) : possède le processus, responsable de son développement stratégique, s'assure du déploiement du plan.",
+      "Configuration Manager, membre complet ou invité du CCB (IT Manager) : gère la livraison des services CM et la documentation des procédures.",
+      "CM CI System Analyst (IT Analyst) : tâches quotidiennes de gestion de configuration avec peu de supervision.",
+      "CM Specialist (IT Administrator) : tâches quotidiennes sous la direction du CM System Analyst.",
+      "Obtenir tôt l'adhésion des dirigeants crée crédibilité et confiance à long terme, donc une meilleure adoption."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le comité de direction du restaurant : l'investisseur (Executive Sponsor), le directeur qui préside (Process Owner / Chair), le chef de cuisine (Configuration Manager), le sous-chef autonome (CI System Analyst) et le commis qui suit ses consignes (Specialist).",
+      "fonction": "Si le registre est faux, plus personne ne le consulte (isolement, sous-utilisation) : le comité garantit qu'il reste fiable et décide quand on peut s'en servir.",
+      "limite": "Deux « process owners » différents : le CCB Process Owner est l'Executive Sponsor, le CM Process Owner est le président (Chair) du CCB. L'analogie du restaurant ne fait pas cette nuance."
+    },
+    "pieges_examen": [
+      "Le CCB Chair est le CM Process Owner (Senior Manager), pas l'Executive Sponsor.",
+      "Données inexactes → isolement et sous-utilisation.",
+      "CM Specialist = travaille sous la direction du CM CI System Analyst.",
+      "Adhésion précoce des dirigeants → crédibilité, confiance, adoption."
+    ],
+    "source": "CMDB Fundamentals, leçon 6/9 – « Build team and governance model » et tableau « Configuration Control Board (CCB) »"
+  },
+  {
+    "id": "concevoir-modele-donnees",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Étape 3 : concevoir le modèle de données",
+    "definition": "Concevoir le modèle de données de service : commencer simplement et progressivement, utiliser les classes de CI standard (out-of-box), prendre le temps de modéliser les données de service, et utiliser le peuplement automatisé. Il est recommandé de se former au CSDM et de s'appuyer dessus autant que possible.",
+    "points_cles": [
+      "Déterminer les CI à gérer (serveurs, équipements réseau, datacenters on-prem, bases de données).",
+      "Limiter la personnalisation des enregistrements CI sans cas d'usage métier solide.",
+      "Créer des processus de gestion du cycle de vie et de la santé.",
+      "Suivre les recommandations prescriptives du CSDM.",
+      "Peuplement automatisé : Discovery, Service Mapping, Agent Client Collector, SG Connectors.",
+      "Exemple du cours : … puis établir la visibilité sur les versions logicielles et les correctifs, et créer les relations de dépendance entre pare-feux, serveurs et applications."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Dessiner le plan du registre : commencer par les équipements principaux, utiliser les catégories du catalogue standard, ne pas ajouter de cases sans vraie raison, et confier l'inventaire à des inspecteurs automatiques plutôt qu'à la main.",
+      "fonction": "Un registre simple, standard et rempli automatiquement reste juste dans le temps.",
+      "limite": "Le cours liste des outils de peuplement (Discovery, Service Mapping, Agent Client Collector, SG Connectors) sans les détailler ici : l'analogie de l'inspecteur ne dit pas comment chacun fonctionne."
+    },
+    "pieges_examen": [
+      "Start simply and gradually ; use out-of-box CI classes.",
+      "Personnalisation limitée sauf cas d'usage métier fort.",
+      "Suivre le CSDM.",
+      "Peuplement automatisé plutôt que manuel."
+    ],
+    "source": "CMDB Fundamentals, leçon 6/9 – « Design a data model » — info manquante : début de l'exemple (« … and Application CI classes ») et fin de la phrase sur le CSDM."
+  },
+  {
+    "id": "trois-piliers",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Étape 4 : les trois piliers Ingest, Govern, Insight",
+    "definition": "Trois piliers pour opérationnaliser et maintenir la santé de la CMDB : Ingest (alimenter), Govern (gouverner), Insight (exploiter). Pour chacun, ServiceNow fournit des outils, réunis dans le CMDB Workspace.",
+    "points_cles": [
+      "Ingest : apporter des données en continu (fusion, mise à jour, suppression), automatiser l'import des CI physiques et cloud, fusionner des sources en un modèle de confiance, relier découvrable et non découvrable, garantir la propriété des données.",
+      "Govern : maintenir l'exactitude, aligner les enregistrements sur la structure et les définitions, processus de cycle de vie (retrait, archivage, suppression), remédiation des doublons, attestation / certification / audit, alignement sur le CSDM.",
+      "Insight : donner du sens aux données pour décider, soutenir incident / problème / changement, rechercher et interroger, reporting et métriques, servir produits, rôles, personas et processus consommateurs.",
+      "Outils Ingest : ServiceNow Discovery, Service Mapping, Agent Client Collector, Service Graph Connectors, IntegrationHub ETL, Import Sets.",
+      "Outils Govern : CI Class Manager, CMDB Health Dashboard, CMDB Data Manager, Duplicate CI Remediator, De-duplication Templates.",
+      "Outils Insight : CMDB Query Builder, Unified Map, Intelligent Search, CMDB and CSDM Data Foundations Dashboard.",
+      "Le CMDB Workspace couvre les trois piliers."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Ingest = faire entrer les livraisons dans le registre ; Govern = les inspections d'hygiène, le tri des doublons, la mise au rebut ; Insight = le gérant qui interroge le registre et pilote.",
+      "fonction": "Classer chaque outil selon son métier : faire entrer, tenir propre, ou exploiter.",
+      "limite": "Certains outils touchent plusieurs piliers en pratique ; à l'examen, retenez le classement exact du cours (ex. CI Class Manager = Govern)."
+    },
+    "pieges_examen": [
+      "CI Class Manager et CMDB Health Dashboard = Govern (pas Insight).",
+      "IntegrationHub ETL et Import Sets = Ingest.",
+      "Unified Map et Intelligent Search = Insight.",
+      "Attestation, certification, audit et duplicate remediation = Govern."
+    ],
+    "source": "CMDB Fundamentals, leçons 6/9 et 7/9 – « Three Pillars to operationalize and maintain the health of your CMDB » et « CMDB tools and features supporting the 3 pillars »"
+  },
+  {
+    "id": "service-graph-connectors",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Service Graph Connectors",
+    "definition": "Facilitent l'intégration entre ServiceNow et des systèmes externes pour importer et synchroniser les données.",
+    "points_cles": [
+      "Connecteurs préconstruits : outils de gestion IT, services cloud et applications tierces (ex. Azure, Intune, MS SCCM, Jamf, AWS).",
+      "Cohérence des données : garantir cohérence et exactitude des données de configuration entre systèmes.",
+      "Construits par ServiceNow ou un partenaire, testés par ServiceNow et conformes au CSDM, avec moteur de réconciliation multisource ; les données passent par l'IRE avant la CMDB.",
+      "Licence payante : OUI, via le ServiceNow Store, SAUF le connecteur Microsoft SCCM (gratuit).",
+      "Les identifiants (credentials) de l'application cible sont nécessaires."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Des bons de livraison automatiques envoyés par chaque grand fournisseur (Azure, AWS, Jamf…), au format déjà conforme au registre, contrôlés à la porte par l'IRE avant d'entrer.",
+      "fonction": "Importer et synchroniser en continu depuis des outils tiers, sans ressaisie.",
+      "limite": "Contrairement à un fournisseur qui livre de lui-même, il faut fournir les identifiants de l'application cible pour que le connecteur puisse lire ses données."
+    },
+    "pieges_examen": [
+      "Seul outil de la liste qui exige une licence payante (Store), sauf SCCM gratuit.",
+      "Passent par l'IRE ; testés ServiceNow / conformes CSDM.",
+      "Credentials de l'application cible requis."
+    ],
+    "source": "CMDB Fundamentals, leçon 7/9 – « Service Graph Connectors »"
+  },
+  {
+    "id": "integrationhub-etl",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "IntegrationHub ETL",
+    "definition": "IntegrationHub ETL (Extract, Transform, Load) simplifie et automatise l'import et l'intégration de données de sources externes dans la plateforme, en particulier dans la CMDB, mais aussi dans des tables de base hors CMDB.",
+    "points_cles": [
+      "Data integration : import fluide de données externes.",
+      "Data transformation : transformer et normaliser selon le modèle de données ServiceNow avant chargement dans la CMDB ou d'autres applications.",
+      "Automation : automatiser l'ETL, moins d'interventions manuelles, mises à jour cohérentes.",
+      "Schéma : Data → Robust Transform Engine → IRE (CI Identification Rule, CI Reconciliation Rule) → CMDB.",
+      "Licence payante : NON (accessible via le ServiceNow Store)."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "La cuisine de préparation : on lave, découpe et calibre ce qui arrive (transform) selon les normes de la maison avant de le ranger, en passant par le contrôle à la porte (IRE).",
+      "fonction": "Normaliser des sources hétérogènes avant chargement, de façon automatisée.",
+      "limite": "Accessible via le Store mais NON payant : ne pas confondre avec les Service Graph Connectors, également sur le Store mais payants."
+    },
+    "pieges_examen": [
+      "ETL = Extract, Transform, Load.",
+      "Passe par l'IRE (règles d'identification et de réconciliation).",
+      "Gère aussi des tables de base hors CMDB.",
+      "Pas de licence payante."
+    ],
+    "source": "CMDB Fundamentals, leçon 7/9 – « IntegrationHub ETL » — info manquante : fin de la ligne de licence et considérations additionnelles."
+  },
+  {
+    "id": "import-sets-transform-maps",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Import Sets et Transform Maps",
+    "definition": "Les import sets et transform maps sont la méthode la plus ancienne pour importer et transformer des données dans la CMDB.",
+    "points_cles": [
+      "Data staging : les Import Sets stockent temporairement des données extraites de sources externes (CSV, Excel, bases de données, API).",
+      "Field mapping : définir comment les champs de la table d'Import Set correspondent aux champs des tables CMDB cibles.",
+      "Transform scripts : scripts pour transformations complexes, calculs ou mises en forme.",
+      "Licence payante : NON, application System Import Sets.",
+      "Par défaut, Import Sets et Transform Maps n'utilisent PAS l'Identification and Reconciliation Engine (IRE)."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "On dépose les cartons dans un sas (staging), on indique quelle étiquette va dans quel rayon (field mapping), et on bricole à la main les cas spéciaux (scripts). Mais par défaut, on contourne le contrôleur de la porte (IRE).",
+      "fonction": "La méthode historique, flexible, mais qui sans précaution peut créer des doublons faute de contrôle IRE.",
+      "limite": "La phrase du cours sur l'IRE est coupée sur la capture : l'idée retenue (pas d'IRE par défaut) est lisible, mais pas la suite."
+    },
+    "pieges_examen": [
+      "Méthode la plus ancienne.",
+      "N'utilise pas l'IRE par défaut (contrairement à SGC et IntegrationHub ETL).",
+      "Staging → field mapping → transform scripts.",
+      "Gratuit : System Import Sets."
+    ],
+    "source": "CMDB Fundamentals, leçon 7/9 – « Import sets and transform maps » — info manquante : fin de la phrase sur l'IRE."
+  },
+  {
+    "id": "cmdb-health-dashboard",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "CMDB Health Dashboard",
+    "definition": "Outil essentiel pour surveiller et gérer la santé de la CMDB : vue complète de la qualité des données, identification des problèmes, pour une CMDB exacte, complète et fiable.",
+    "points_cles": [
+      "Health scorecard : résumé de la santé globale pour Completeness, Correctness et Compliance.",
+      "Top 10 : visualisations des classes qui pèsent sur chaque scorecard, avec exploration jusqu'aux CI.",
+      "Licence payante : NON, instance de base ; accessible depuis le CMDB Workspace, onglet Management.",
+      "Des jobs planifiés alimentent les indicateurs (phrase coupée)."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le bulletin d'inspection d'hygiène du registre : toutes les fiches sont-elles remplies (complétude), justes (exactitude), conformes aux règles (conformité) ? Avec le top 10 des rayons les plus en défaut.",
+      "fonction": "Mesurer la qualité du registre et savoir où agir en premier.",
+      "limite": "Le bulletin constate, il ne corrige pas : la correction passe par d'autres outils (Data Manager, dédoublonnage)."
+    },
+    "pieges_examen": [
+      "Les 3 C : Completeness, Correctness, Compliance.",
+      "Gratuit, CMDB Workspace > Management.",
+      "Top 10 des classes qui dégradent chaque scorecard."
+    ],
+    "source": "CMDB Fundamentals, leçon 7/9 – « CMDB Health Dashboard » — info manquante : fin des considérations additionnelles (jobs planifiés)."
+  },
+  {
+    "id": "cmdb-data-manager",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "CMDB Data Manager",
+    "definition": "Outil qui aide à gérer le cycle de vie des données de la CMDB : qualité, gouvernance et gestion du cycle de vie, pour des données exactes, à jour et conformes aux standards de l'organisation.",
+    "points_cles": [
+      "Data certification : valider automatiquement les données selon des règles prédéfinies (exactitude, complétude).",
+      "Lifecycle policies : politiques claires de retrait (retire), archivage et suppression.",
+      "Attestation policies : création automatique de tâches pour vérifier l'existence physique de l'infrastructure et des applications.",
+      "Licence payante : NON, accessible via le CMDB Workspace.",
+      "Certains types de politiques (Retire, Archive, Delete) ont des considérations particulières (phrase coupée)."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le règlement intérieur du registre : contrôles réguliers des fiches (certification), règles de mise à la retraite, d'archivage et de destruction des fiches, et tournées où quelqu'un va vérifier que le four existe vraiment (attestation).",
+      "fonction": "Industrialiser la gouvernance : vérifier, faire vieillir et retirer proprement les données.",
+      "limite": "Certification = contrôle automatique par des règles ; attestation = tâche confiée à une personne pour vérifier l'existence physique. Ne pas confondre."
+    },
+    "pieges_examen": [
+      "Certification ≠ attestation (règles automatiques vs vérification d'existence physique).",
+      "Lifecycle policies : Retire, Archive, Delete.",
+      "Gratuit, via le CMDB Workspace."
+    ],
+    "source": "CMDB Fundamentals, leçon 7/9 – « CMDB Data Manager » (photo un peu floue) — info manquante : fin des considérations additionnelles."
+  },
+  {
+    "id": "dedoublonnage-ci",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Dédoublonnage : De-duplication Templates et Duplicate CI Remediation Wizard",
+    "definition": "ServiceNow fournit des templates de dédoublonnage, préconfigurés avec des règles et critères personnalisables, qui permettent à l'administrateur CMDB de résoudre les doublons EN MASSE plutôt qu'un par un. Le Duplicate CI Remediation Wizard guide l'utilisateur pas à pas dans la réconciliation des CI en double.",
+    "points_cles": [
+      "Templates – regular maintenance : planifiables pour fusionner ou supprimer les doublons selon des critères prédéfinis.",
+      "Templates – matching rules : règles d'attributs (classe, localisation, fabricant, modèle) associées au template.",
+      "Templates et wizard – merge and delete : fusionner les doublons en un seul CI ou supprimer ceux jugés inutiles, pour ne garder que le CI le plus exact et complet.",
+      "Wizard – automated detection : identifie les doublons potentiels selon des règles (attributs ou relations correspondants).",
+      "Wizard – intuitive interface : guide l'utilisateur dans le dédoublonnage.",
+      "Wizard : licence payante NON, instance de base, accessible depuis le CMDB Workspace."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Templates = la grande opération de tri planifiée chaque semaine : « tous les fours de même modèle, même marque et même cuisine sont un seul et même four ». Wizard = l'assistant qui vous accompagne pour régler un cas de doublon précis.",
+      "fonction": "Choisir entre traitement en masse automatisé (template) et traitement guidé au cas par cas (wizard).",
+      "limite": "Les deux outils savent fusionner et supprimer ; la différence tient à l'échelle (masse vs guidé) et à la planification."
+    },
+    "pieges_examen": [
+      "Templates = résolution en masse (bulk), planifiable.",
+      "Matching rules : class, location, manufacturer, model.",
+      "Wizard = guidé, détection automatique des doublons.",
+      "Merge = combiner les infos en un seul CI ; delete = supprimer les doublons inutiles."
+    ],
+    "source": "CMDB Fundamentals, leçon 7/9 – « De-duplication templates » et « Duplicate CI Remediation Wizard » — info manquante : onglet exact d'accès du wizard (coupé)."
+  },
+  {
+    "id": "outils-insight",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Outils Insight : Query Builder, Unified Map, Intelligent Search, Data Foundations Dashboards",
+    "definition": "Outils pour exploiter les données de la CMDB : interroger, visualiser, rechercher et mesurer la conformité au CSDM.",
+    "points_cles": [
+      "CMDB Query Builder : construire visuellement des requêtes complexes sur tables CMDB et hors CMDB (CI et relations) ; glisser-déposer sans SQL ; filtres AND/OR. Gratuit, CMDB Workspace > Management. Demande une bonne connaissance du modèle de données.",
+      "Unified Map : vue complète et interactive des CI et de leurs relations ; zoom et déplacement ; dependency mapping pour voir l'impact des changements ou incidents. Gratuit, CMDB Workspace > Management.",
+      "Intelligent Search : recherche en langage courant (natural language query, NLQ) ; IA qui s'améliore avec le comportement et les retours ; filtres avancés. Gratuit, CMDB Workspace > Home. Le NLQ réduit fortement les compétences nécessaires.",
+      "CMDB and CSDM Data Foundations Dashboards : surveiller, gérer et optimiser la qualité et la structure des données selon le CSDM ; visibilité, conformité aux politiques, playbooks (guides de bonnes pratiques). Gratuit, mises à jour via le ServiceNow Store."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Query Builder = composer une question précise au registre en assemblant des blocs. Unified Map = le plan interactif des branchements de la cuisine. Intelligent Search = demander à voix haute « quels fours sont en panne à Paris ? ». Data Foundations Dashboards = l'audit de conformité au plan d'organisation, avec ses fiches réflexes (playbooks).",
+      "fonction": "Choisir le bon outil selon le besoin : requête structurée, visualisation des dépendances, question en langage naturel, ou contrôle de conformité CSDM.",
+      "limite": "Ces outils exploitent les données mais ne les corrigent pas ; et seul Intelligent Search est dans l'onglet Home, les autres décrits sont dans Management."
+    },
+    "pieges_examen": [
+      "Query Builder : drag-and-drop, pas de SQL, AND/OR, CMDB ET non-CMDB.",
+      "Unified Map : dépendances et impact des changements / incidents.",
+      "Intelligent Search : NLQ, onglet Home.",
+      "Data Foundations Dashboards : conformité CSDM, playbooks, mises à jour via le Store."
+    ],
+    "source": "CMDB Fundamentals, leçon 7/9 – « CMDB insight » (Query Builder, Unified Map, Intelligent Search, CMDB and CSDM Data Foundations Dashboards) — info manquante : fin des considérations de Unified Map."
+  },
+  {
+    "id": "licences-acces-outils",
+    "theme": "cmdb-construire-exploiter",
+    "titre": "Licences et accès des outils CMDB",
+    "definition": "Pour chaque outil, le cours précise s'il faut une licence payante et où y accéder. C'est un point d'examen classique.",
+    "points_cles": [
+      "Service Graph Connectors : licence PAYANTE via le ServiceNow Store, sauf le connecteur Microsoft SCCM (gratuit).",
+      "IntegrationHub ETL : pas de licence payante, via le ServiceNow Store.",
+      "Import Sets / Transform Maps : pas de licence payante, application System Import Sets.",
+      "CMDB Health Dashboard : pas de licence, instance de base, CMDB Workspace > Management.",
+      "CMDB Data Manager : pas de licence, via le CMDB Workspace.",
+      "Duplicate CI Remediation Wizard : pas de licence, instance de base, CMDB Workspace.",
+      "CMDB Query Builder et Unified Map : pas de licence, CMDB Workspace > Management.",
+      "Intelligent Search : pas de licence, CMDB Workspace > Home.",
+      "CMDB and CSDM Data Foundations Dashboards : pas de licence, mises à jour via le ServiceNow Store."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "La carte des services du restaurant : presque tout est compris dans le menu (instance de base), un seul supplément payant (les connecteurs fournisseurs), avec une exception offerte (SCCM).",
+      "fonction": "Mémoriser l'exception : tout est inclus sauf les Service Graph Connectors.",
+      "limite": "« Disponible sur le Store » ne veut pas dire « payant » : IntegrationHub ETL et les Data Foundations Dashboards passent par le Store sans licence payante."
+    },
+    "pieges_examen": [
+      "Seuls les Service Graph Connectors sont payants (sauf SCCM).",
+      "Intelligent Search = onglet Home ; Health Dashboard, Query Builder, Unified Map = onglet Management.",
+      "Store ≠ payant."
+    ],
+    "source": "CMDB Fundamentals, leçon 7/9 – mentions « Requires paid license » de chaque outil"
   }
 ]

@@ -4,8 +4,15 @@
     "theme": "plateforme-servicenow",
     "notion": "plateforme-interface-schema",
     "question": "Sur quoi l'interface utilisateur web configurable de ServiceNow est-elle construite ?",
-    "choix": ["Un schéma de données flexible", "Un fichier de configuration par utilisateur", "Une base de données figée par client", "Un CDN externe"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Un schéma de données flexible",
+      "Un fichier de configuration par utilisateur",
+      "Une base de données figée par client",
+      "Un CDN externe"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "ServiceNow fournit ses services via une interface web configurable, construite au-dessus d'un schéma de données flexible (des données organisées).",
     "analogie": "L'aménagement intérieur repose sur les fondations et la charpente de la maison."
   },
@@ -14,19 +21,34 @@
     "theme": "plateforme-servicenow",
     "notion": "plateforme-interface-schema",
     "question": "Quels qualificatifs le cours associe-t-il à chaque couche ? (plusieurs réponses)",
-    "choix": ["Interface web « configurable »", "Schéma de données « flexible »", "Interface web « figée »", "Schéma de données « propriétaire du client »"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "Interface web « configurable »",
+      "Schéma de données « flexible »",
+      "Interface web « figée »",
+      "Schéma de données « propriétaire du client »"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "Le cours parle d'une configurable web-based user interface et d'un flexible data schema.",
     "analogie": "On réaménage les pièces (configurable) ; on peut agrandir la maison sur ses fondations (flexible)."
   },
-
   {
     "id": "q-csdm-foundation-vs-infrastructure-1",
     "theme": "cmdb-csdm",
     "notion": "csdm-foundation-vs-infrastructure",
     "question": "À quoi sert le modèle de données (CSDM) selon le cours ? (plusieurs réponses)",
-    "choix": ["Déterminer où enregistrer les éléments dans la CMDB", "Identifier les relations importantes pour apporter de la valeur métier", "Remplacer Discovery pour collecter les CI", "Calculer le coût des assets"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "Déterminer où enregistrer les éléments dans la CMDB",
+      "Identifier les relations importantes pour apporter de la valeur métier",
+      "Remplacer Discovery pour collecter les CI",
+      "Calculer le coût des assets"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "Le data model aide à déterminer où enregistrer les éléments dans la CMDB et quelles relations comptent pour la valeur métier.",
     "analogie": "Le plan d'organisation du restaurant dit dans quel registre noter chaque chose et quels branchements surveiller."
   },
@@ -35,8 +57,15 @@
     "theme": "cmdb-csdm",
     "notion": "csdm-foundation-vs-infrastructure",
     "question": "Comment les Infrastructure Data sont-elles liées aux Foundation Data sur le schéma CMDB / CSDM ?",
-    "choix": ["Par des références (references)", "Par des relations CI (relationships)", "Par héritage de classe", "Elles ne sont pas liées"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Par des références (references)",
+      "Par des relations CI (relationships)",
+      "Par héritage de classe",
+      "Elles ne sont pas liées"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "La flèche entre Infrastructure Data et Foundation Data est étiquetée REFERENCES ; les RELATIONSHIPS lient les éléments d'infrastructure entre eux.",
     "analogie": "L'étiquette sur le four renvoie au registre (référence) ; le tuyau de gaz le relie à un autre équipement (relation)."
   },
@@ -45,19 +74,35 @@
     "theme": "cmdb-csdm",
     "notion": "csdm-foundation-vs-infrastructure",
     "question": "Lesquels font partie des Foundation Data ? (plusieurs réponses)",
-    "choix": ["Locations", "Users", "Servers", "Contracts", "Databases"],
-    "bonnes_reponses": [0, 1, 3],
+    "choix": [
+      "Locations",
+      "Users",
+      "Servers",
+      "Contracts",
+      "Databases"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
     "explication": "Foundation Data : Groups, Contracts, Product Models, Company, Business Units, Departments, Locations, Users, Processes. Servers et Databases sont des Infrastructure Data.",
     "analogie": "Le registre administratif (adresses, personnel, contrats) n'est pas un équipement de cuisine."
   },
-
   {
     "id": "q-csdm-5-domaines-1",
     "theme": "cmdb-csdm",
     "notion": "csdm-5-domaines",
     "question": "Dans le CSDM 5, dans quel domaine se trouve la Business Application ?",
-    "choix": ["Design & Planning", "Service Delivery", "Service Consumption", "Foundation"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Design & Planning",
+      "Service Delivery",
+      "Service Consumption",
+      "Foundation"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Design & Planning contient Business Capability, Business Application et Information Object.",
     "analogie": "La recette s'écrit au moment de la conception du menu, pas pendant le service."
   },
@@ -66,8 +111,18 @@
     "theme": "cmdb-csdm",
     "notion": "csdm-5-domaines",
     "question": "Quels éléments appartiennent au domaine Service Consumption ? (plusieurs réponses)",
-    "choix": ["Business Service", "Business Offering", "Technology Management Service", "Service Catalog", "SDLC Component"],
-    "bonnes_reponses": [0, 1, 3],
+    "choix": [
+      "Business Service",
+      "Business Offering",
+      "Technology Management Service",
+      "Service Catalog",
+      "SDLC Component"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
     "explication": "Service Consumption : Business Service, Business Offering et le Catalog (Service, Product, Sales Catalog). Technology Management Service est en Service Delivery, SDLC Component en Build & Integration.",
     "analogie": "La carte et les formules sont côté client ; la maintenance interne est côté cuisine."
   },
@@ -76,19 +131,32 @@
     "theme": "cmdb-csdm",
     "notion": "csdm-5-domaines",
     "question": "Dans la légende du diagramme CSDM 5, que représente une flèche en pointillé ?",
-    "choix": ["Une référence (Reference)", "Une relation (Relationship)", "Un héritage de classe", "Un flux de données temps réel"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Une référence (Reference)",
+      "Une relation (Relationship)",
+      "Un héritage de classe",
+      "Un flux de données temps réel"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Légende : flèche pleine = Relationship, flèche pointillée = Reference.",
     "analogie": "Le pointillé, c'est l'étiquette qui renvoie au registre ; le trait plein, c'est le vrai branchement."
   },
-
   {
     "id": "q-business-app-vs-app-service-vs-application-1",
     "theme": "cmdb-csdm",
     "notion": "business-app-vs-app-service-vs-application",
     "question": "Quel élément représente TOUS les environnements (Dev, Test, Prod) fournissant une fonction métier ?",
-    "choix": ["Business Application", "Application Service", "Application", "Dynamic CI Group"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Business Application",
+      "Application Service",
+      "Application",
+      "Dynamic CI Group"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "La Business Application représente tous les environnements logiciels et d'infrastructure (Dev, Test, Prod) configurés pour fournir une fonction métier ; elle aide à la rationalisation.",
     "analogie": "La recette couvre toutes ses versions : essai, dégustation, service du soir."
   },
@@ -97,8 +165,15 @@
     "theme": "cmdb-csdm",
     "notion": "business-app-vs-app-service-vs-application",
     "question": "Quelle est la classe CMDB d'un Application Service ?",
-    "choix": ["cmdb_ci_service_auto", "cmdb_ci_business_app", "cmdb_ci_appl", "cmdb_ci_service"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "cmdb_ci_service_auto",
+      "cmdb_ci_business_app",
+      "cmdb_ci_appl",
+      "cmdb_ci_service"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Business Application = cmdb_ci_business_app ; Application Service = cmdb_ci_service_auto ; Application = cmdb_ci_appl.",
     "analogie": "La station en service a sa propre fiche, distincte de la recette et du four."
   },
@@ -107,19 +182,32 @@
     "theme": "cmdb-csdm",
     "notion": "business-app-vs-app-service-vs-application",
     "question": "Quel élément fait le pont entre la couche technique et la couche métier et peut modéliser des microservices par des relations parent/enfant ?",
-    "choix": ["Application Service", "Business Application", "Application", "Business Capability"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Application Service",
+      "Business Application",
+      "Application",
+      "Business Capability"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "L'Application Service représente logiquement une pile applicative déployée, assure la livraison opérationnelle d'une business application et relie technique et métier.",
     "analogie": "La station pizza assemble le four (technique) pour servir la recette (métier), et se découpe en sous-stations."
   },
-
   {
     "id": "q-hierarchie-classes-1",
     "theme": "cmdb-csdm",
     "notion": "hierarchie-classes",
     "question": "Dans la hiérarchie Configuration Item > Hardware > Computer > Server > Windows Server, quelle affirmation est vraie ?",
-    "choix": ["Server est le parent de Windows Server", "Windows Server est le parent de Server", "Computer est un enfant de Server", "Hardware est un enfant de Computer"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Server est le parent de Windows Server",
+      "Windows Server est le parent de Server",
+      "Computer est un enfant de Server",
+      "Hardware est un enfant de Computer"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Les enfants sont des spécialisations de leur parent : Windows Server est un enfant de Server.",
     "analogie": "Le four à pizza est un cas particulier de four, pas l'inverse."
   },
@@ -128,8 +216,16 @@
     "theme": "cmdb-csdm",
     "notion": "hierarchie-classes",
     "question": "Avec quels outils peut-on visualiser la structure des classes ? (plusieurs réponses)",
-    "choix": ["CI Class Manager", "Schema map", "Service Catalog", "Virtual Agent"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "CI Class Manager",
+      "Schema map",
+      "Service Catalog",
+      "Virtual Agent"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "La structure de classes se consulte dans le CI Class Manager ou le schema map de ServiceNow.",
     "analogie": "Le classeur des catégories d'équipements, ou son plan d'ensemble."
   },
@@ -138,8 +234,15 @@
     "theme": "cmdb-csdm",
     "notion": "hierarchie-classes",
     "question": "Quelle est la bonne pratique recommandée pour les classes ?",
-    "choix": ["Garder des classes simples et utiliser les classes de base ServiceNow", "Créer une classe par type de matériel acheté", "Éviter toute sous-classe", "Mettre tous les CI dans cmdb_ci"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Garder des classes simples et utiliser les classes de base ServiceNow",
+      "Créer une classe par type de matériel acheté",
+      "Éviter toute sous-classe",
+      "Mettre tous les CI dans cmdb_ci"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Le cours recommande des classes simples et l'usage des classes de base fournies par ServiceNow ; plus on descend, plus les CI sont spécialisés.",
     "analogie": "Ranger dans les catégories du catalogue standard plutôt qu'inventer « four-à-pizza-au-bois-du-chef »."
   },
@@ -148,19 +251,36 @@
     "theme": "cmdb-csdm",
     "notion": "hierarchie-classes",
     "question": "Quelles classes sont des enfants directs de Hardware [cmdb_ci_hardware] dans la structure type du cours ? (plusieurs réponses)",
-    "choix": ["Network Gear [cmdb_ci_netgear]", "Computer [cmdb_ci_computer]", "Server [cmdb_ci_server]", "IP Router [cmdb_ci_ip_router]"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "Network Gear [cmdb_ci_netgear]",
+      "Computer [cmdb_ci_computer]",
+      "Server [cmdb_ci_server]",
+      "IP Router [cmdb_ci_ip_router]"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "Hardware → Network Gear (→ IP Router, IP Switch) et Hardware → Computer (→ Server → Windows / Linux Server).",
     "analogie": "Sous « électroménager » : les appareils réseau et les appareils de calcul, puis leurs sous-catégories."
   },
-
   {
     "id": "q-references-cmdb-ci-1",
     "theme": "cmdb-csdm",
     "notion": "references-cmdb-ci",
     "question": "Quels champs de cmdb_ci font référence à sys_user_group ? (plusieurs réponses)",
-    "choix": ["Support group", "Assignment group", "Supported by", "Managed by", "Change control"],
-    "bonnes_reponses": [0, 1, 4],
+    "choix": [
+      "Support group",
+      "Assignment group",
+      "Supported by",
+      "Managed by",
+      "Change control"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      4
+    ],
     "explication": "sys_user_group ← Assignment group, Change control, Support group. Supported by et Managed by pointent vers sys_user (des personnes).",
     "analogie": "La case « équipe de maintenance » renvoie à la liste des équipes ; « responsable » renvoie à l'annuaire du personnel."
   },
@@ -169,8 +289,15 @@
     "theme": "cmdb-csdm",
     "notion": "references-cmdb-ci",
     "question": "Vers quelle table pointent les champs Company, Manufacturer et Vendor d'un CI ?",
-    "choix": ["core_company", "sys_user_group", "cmn_location", "cmdb_model"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "core_company",
+      "sys_user_group",
+      "cmn_location",
+      "cmdb_model"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Les trois champs pointent vers la même table core_company : seul le rôle de l'entreprise change.",
     "analogie": "Propriétaire, fabricant et fournisseur du four sont tous dans l'annuaire des entreprises."
   },
@@ -179,19 +306,32 @@
     "theme": "cmdb-csdm",
     "notion": "references-cmdb-ci",
     "question": "Quelle table est référencée par le champ Asset d'un CI ?",
-    "choix": ["alm_asset", "cmdb_model", "cmn_schedule", "cmn_cost_center"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "alm_asset",
+      "cmdb_model",
+      "cmn_schedule",
+      "cmn_cost_center"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Asset → alm_asset ; Model ID → cmdb_model ; Maintenance schedule → cmn_schedule.",
     "analogie": "La fiche du four renvoie à son dossier comptable."
   },
-
   {
     "id": "q-foundation-data-relations-1",
     "theme": "cmdb-csdm",
     "notion": "foundation-data-relations",
     "question": "Quelle table stocke l'appartenance d'un utilisateur à un groupe ?",
-    "choix": ["sys_user_grmember", "sys_user_has_role", "sys_group_has_role", "sys_user_role"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "sys_user_grmember",
+      "sys_user_has_role",
+      "sys_group_has_role",
+      "sys_user_role"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "User et Group sont reliés par Group Member [sys_user_grmember].",
     "analogie": "Le badge de membre de la brigade."
   },
@@ -200,8 +340,16 @@
     "theme": "cmdb-csdm",
     "notion": "foundation-data-relations",
     "question": "D'où peuvent venir les rôles d'un utilisateur (sys_user_has_role) d'après le schéma ? (plusieurs réponses)",
-    "choix": ["Des rôles de ses groupes (sys_group_has_role)", "D'un rôle attribué directement (sys_user_role)", "De sa localisation (cmn_location)", "De son centre de coûts"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "Des rôles de ses groupes (sys_group_has_role)",
+      "D'un rôle attribué directement (sys_user_role)",
+      "De sa localisation (cmn_location)",
+      "De son centre de coûts"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "User Roles est alimentée par Roles (attribution directe) et par Group Roles. Le cours précise que les groupes doivent contenir les rôles appropriés.",
     "analogie": "Les clés viennent de la brigade… ou, exceptionnellement, d'une remise en main propre."
   },
@@ -210,19 +358,38 @@
     "theme": "cmdb-csdm",
     "notion": "foundation-data-relations",
     "question": "Quelles tables de base ont une hiérarchie « Parent » sur le schéma ? (plusieurs réponses)",
-    "choix": ["Location", "Company", "Group", "Building", "User"],
-    "bonnes_reponses": [0, 1, 2],
+    "choix": [
+      "Location",
+      "Company",
+      "Group",
+      "Building",
+      "User"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
     "explication": "Location, Cost Center, Company, Department et Group ont une flèche Parent qui revient sur elles-mêmes. Building et User n'en ont pas.",
     "analogie": "France > Paris > 12 rue X ; Groupe > Filiale ; Brigade > Équipe pâtisserie."
   },
-
   {
     "id": "q-asset-vs-ci-1",
     "theme": "cmdb-csdm",
     "notion": "asset-vs-ci",
     "question": "Lesquels sont à la fois asset et CI selon le diagramme ? (plusieurs réponses)",
-    "choix": ["Physical Server", "Virtual Server", "Router", "Software License", "Printers"],
-    "bonnes_reponses": [0, 2, 4],
+    "choix": [
+      "Physical Server",
+      "Virtual Server",
+      "Router",
+      "Software License",
+      "Printers"
+    ],
+    "bonnes_reponses": [
+      0,
+      2,
+      4
+    ],
     "explication": "Les deux : Personal Computers, Printers, Router, Switch, Physical Server, On Prem Datacenter. Virtual Server = CI seulement ; Software License = asset seulement.",
     "analogie": "Le four est acheté (compta) et branché (cuisine) ; le site de réservation tourne sans facture d'achat propre."
   },
@@ -231,8 +398,15 @@
     "theme": "cmdb-csdm",
     "notion": "asset-vs-ci",
     "question": "Lequel est un asset SANS être un CI ?",
-    "choix": ["Consumables", "Database", "Web Sites", "Switch"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Consumables",
+      "Database",
+      "Web Sites",
+      "Switch"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Asset seulement : Contracts, Consumables, Software License, Buildings.",
     "analogie": "La farine passe par la compta, mais ne « tourne » pas en cuisine comme un équipement."
   },
@@ -241,19 +415,35 @@
     "theme": "cmdb-csdm",
     "notion": "asset-vs-ci",
     "question": "Quelle vue correspond au CI ?",
-    "choix": ["Opérationnelle (usage)", "Financière", "Contractuelle", "Comptable"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Opérationnelle (usage)",
+      "Financière",
+      "Contractuelle",
+      "Comptable"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Le diagramme oppose Financial (Assets) et Operational (CIs).",
     "analogie": "La cuisine (comment ça fonctionne) contre la compta (combien ça coûte)."
   },
-
   {
     "id": "q-attributs-critiques-1",
     "theme": "cmdb-csdm",
     "notion": "attributs-critiques",
     "question": "Lesquels sont des attributs NON découvrables ? (plusieurs réponses)",
-    "choix": ["Support Group", "Serial Number", "Approval Group", "IP Address", "Managed By Group"],
-    "bonnes_reponses": [0, 2, 4],
+    "choix": [
+      "Support Group",
+      "Serial Number",
+      "Approval Group",
+      "IP Address",
+      "Managed By Group"
+    ],
+    "bonnes_reponses": [
+      0,
+      2,
+      4
+    ],
     "explication": "Non découvrables : Support Group, Approval Group, Managed By Group, Change Group. Serial Number et IP Address sont découvrables.",
     "analogie": "On lit le numéro de série sur la plaque ; on doit demander qui dépanne l'appareil."
   },
@@ -262,8 +452,15 @@
     "theme": "cmdb-csdm",
     "notion": "attributs-critiques",
     "question": "Comment s'appelait auparavant le Change Group ?",
-    "choix": ["Assignment group", "Support group", "Approval group", "Managed by group"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Assignment group",
+      "Support group",
+      "Approval group",
+      "Managed by group"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Le cours indique « Change Group (formerly Assignment group) ».",
     "analogie": "Même équipe, nouveau nom sur la porte."
   },
@@ -272,8 +469,16 @@
     "theme": "cmdb-csdm",
     "notion": "attributs-critiques",
     "question": "Pourquoi éviter les attributs personnalisés ? (plusieurs réponses)",
-    "choix": ["Ils nuisent souvent à la santé de la CMDB", "Ils créent de la dette technique", "Ils empêchent Discovery de fonctionner", "Ils sont interdits par ServiceNow"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "Ils nuisent souvent à la santé de la CMDB",
+      "Ils créent de la dette technique",
+      "Ils empêchent Discovery de fonctionner",
+      "Ils sont interdits par ServiceNow"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "Le cours recommande les attributs de base de chaque classe : les attributs custom mènent souvent à une mauvaise santé de la CMDB et à de la dette technique.",
     "analogie": "La case « couleur préférée du chef » sur toutes les fiches : personne ne la remplit et elle encombre."
   },
@@ -282,19 +487,35 @@
     "theme": "cmdb-csdm",
     "notion": "attributs-critiques",
     "question": "Que faire des CI auxquels il manque des attributs non découvrables ?",
-    "choix": ["Assigner des tâches aux utilisateurs et groupes appropriés pour compléter", "Les supprimer de la CMDB", "Relancer Discovery jusqu'à ce qu'ils soient remplis", "Créer des attributs personnalisés"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Assigner des tâches aux utilisateurs et groupes appropriés pour compléter",
+      "Les supprimer de la CMDB",
+      "Relancer Discovery jusqu'à ce qu'ils soient remplis",
+      "Créer des attributs personnalisés"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "On identifie les CI incomplets et on assigne des tâches aux bons utilisateurs et groupes pour ajouter les données manquantes : Discovery ne peut pas les trouver.",
     "analogie": "On ne lira jamais « équipe de dépannage » sur le four : il faut le demander aux gens."
   },
-
   {
     "id": "q-asset-vs-configuration-management-1",
     "theme": "cmdb-csdm",
     "notion": "asset-vs-configuration-management",
     "question": "Quelles étapes appartiennent au cycle de vie de l'ASSET ? (plusieurs réponses)",
-    "choix": ["Procure", "Tagging", "Break / Fix", "Receive", "Upgrade"],
-    "bonnes_reponses": [0, 1, 3],
+    "choix": [
+      "Procure",
+      "Tagging",
+      "Break / Fix",
+      "Receive",
+      "Upgrade"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
     "explication": "Cycle de l'asset : Requirement, Request, Approval, Procure, Receive, Tagging, Storage, Deploy. Break / Fix et Upgrade sont dans le cycle opérationnel.",
     "analogie": "Acheter, réceptionner, étiqueter : c'est la compta ; réparer et améliorer : c'est la cuisine."
   },
@@ -303,19 +524,34 @@
     "theme": "cmdb-csdm",
     "notion": "asset-vs-configuration-management",
     "question": "Que permet une gestion conjointe de la Configuration Management et de l'IT Asset Management ? (plusieurs réponses)",
-    "choix": ["Une vue globale de l'infrastructure IT", "L'efficacité opérationnelle", "La responsabilité financière", "La suppression du besoin de Discovery"],
-    "bonnes_reponses": [0, 1, 2],
+    "choix": [
+      "Une vue globale de l'infrastructure IT",
+      "L'efficacité opérationnelle",
+      "La responsabilité financière",
+      "La suppression du besoin de Discovery"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
     "explication": "Le cours : vue holistique de l'infrastructure, efficacité opérationnelle et responsabilité financière.",
     "analogie": "Le gérant voit à la fois la compta et la cuisine."
   },
-
   {
     "id": "q-cycle-vie-asset-ci-1",
     "theme": "cmdb-csdm",
     "notion": "cycle-vie-asset-ci",
     "question": "À partir de quelle phase la gestion de la CMDB (CMDB Mgmt) intervient-elle ?",
-    "choix": ["Deploy", "Purchase", "Inventory", "Ideation"],
-    "bonnes_reponses": [0],
+    "choix": [
+      "Deploy",
+      "Purchase",
+      "Inventory",
+      "Ideation"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
     "explication": "Ideation = Strategic Portfolio Mgmt, Purchase = Procurement, Inventory = Asset Mgmt ; Deploy et Operational = Asset Mgmt + CMDB Mgmt.",
     "analogie": "Un four n'entre dans le registre des branchements qu'une fois installé, pas quand il n'est qu'un bon de commande."
   },
@@ -324,8 +560,16 @@
     "theme": "cmdb-csdm",
     "notion": "cycle-vie-asset-ci",
     "question": "Quels statuts correspondent à la phase Missing ? (plusieurs réponses)",
-    "choix": ["Lost", "Stolen", "Disposed", "Pending Repair"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "Lost",
+      "Stolen",
+      "Disposed",
+      "Pending Repair"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "Missing (depuis Operational) : Lost, Stolen. Disposed est en End of Life ; Pending Repair en Inventory.",
     "analogie": "On ne perd ou ne se fait voler que le four qui était en service."
   },
@@ -334,8 +578,16 @@
     "theme": "cmdb-csdm",
     "notion": "cycle-vie-asset-ci",
     "question": "Quels statuts de fin de vie sont marqués « CI » sur le schéma ? (plusieurs réponses)",
-    "choix": ["Obsolete", "RMA", "Sold", "Donated"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "Obsolete",
+      "RMA",
+      "Sold",
+      "Donated"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "End of Life : Disposed, Donated, In Transit, Pending Disposal, Sold, Vendor Credit, Obsolete – CI, RMA – CI.",
     "analogie": "Retiré du service (obsolète) ou renvoyé au fabricant (RMA) : ça concerne le registre de la cuisine."
   },
@@ -344,9 +596,743 @@
     "theme": "cmdb-csdm",
     "notion": "cycle-vie-asset-ci",
     "question": "Quels statuts appartiennent à la phase Operational ? (plusieurs réponses)",
-    "choix": ["In Use", "In Maintenance", "On Order", "Available"],
-    "bonnes_reponses": [0, 1],
+    "choix": [
+      "In Use",
+      "In Maintenance",
+      "On Order",
+      "Available"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
     "explication": "Operational : In Use, In Maintenance. On Order = Purchase ; Available = Inventory.",
     "analogie": "Le four est soit en train de cuire, soit en réparation."
+  },
+  {
+    "id": "q-cas-usage-non-it-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "cas-usage-non-it",
+    "question": "Quels exemples de cas d'usage non IT de la CMDB le cours cite-t-il ? (plusieurs réponses)",
+    "choix": [
+      "Gestion de flotte de véhicules",
+      "Gestion des équipements médicaux",
+      "Gestion de la paie des employés",
+      "Gestion des infrastructures énergétiques (centrales, pipelines)"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
+    "explication": "Le cours cite notamment flotte, équipements médicaux, bâtiments (HVAC, ascenseurs), production, immobilier et énergie. La paie n'en fait pas partie.",
+    "analogie": "Le registre du restaurant peut suivre la camionnette ou la clim, pas les fiches de paie."
+  },
+  {
+    "id": "q-cas-usage-non-it-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "cas-usage-non-it",
+    "question": "Dans l'exemple immobilier, que permet la gestion des locataires (tenant management) ?",
+    "choix": [
+      "Suivre les informations des locataires, les baux et les demandes de maintenance",
+      "Calculer automatiquement les loyers",
+      "Remplacer le service juridique",
+      "Découvrir automatiquement les bâtiments sur le réseau"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Tenant management : suivre informations locataires, contrats de bail et demandes de maintenance pour une gestion immobilière efficace.",
+    "analogie": "Le local loué du restaurant : son bail et ses demandes de réparation au propriétaire."
+  },
+  {
+    "id": "q-etapes-cmdb-fiable-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "etapes-cmdb-fiable",
+    "question": "Quelle est la première étape vers une CMDB fiable ?",
+    "choix": [
+      "Set your direction",
+      "Build a team and governance model",
+      "Design your service data model",
+      "Operationalize and maintain your CMDB"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Ordre : 1 direction, 2 équipe et gouvernance, 3 modèle de données, 4 exploitation et maintenance.",
+    "analogie": "On choisit le concept du restaurant avant de recruter ou d'acheter les fours."
+  },
+  {
+    "id": "q-etapes-cmdb-fiable-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "etapes-cmdb-fiable",
+    "question": "Quelle étape vient juste avant « Operationalize and maintain your CMDB » ?",
+    "choix": [
+      "Design your service data model",
+      "Set your direction",
+      "Build a team and governance model",
+      "Run Discovery"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "L'étape 3, concevoir le modèle de données de service, précède l'étape 4.",
+    "analogie": "On dessine le plan du registre avant d'ouvrir et de le remplir."
+  },
+  {
+    "id": "q-definir-direction-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "definir-direction",
+    "question": "Quand faut-il déterminer les besoins de reporting de la CMDB ?",
+    "choix": [
+      "Avant que les données soient chargées",
+      "Après le premier chargement complet",
+      "Après la mise en production de Discovery",
+      "Uniquement lors des audits"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Le cours : décisions de conception précoces pour déterminer les besoins de reporting avant, et non après, le peuplement des données.",
+    "analogie": "On choisit les chiffres à suivre avant de remplir le registre, pas après."
+  },
+  {
+    "id": "q-definir-direction-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "definir-direction",
+    "question": "Quelle question correspond au volet « Measure » ?",
+    "choix": [
+      "Comment savoir si vous êtes sur la bonne voie ?",
+      "Que voulez-vous accomplir ?",
+      "Quelles sont vos contraintes ?",
+      "Qui possède les données ?"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Measure : How do you know when you are on track? ; What : que voulez-vous accomplir ?",
+    "analogie": "Le tableau de bord du gérant : sait-on si le restaurant tient ses objectifs ?"
+  },
+  {
+    "id": "q-definir-direction-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "definir-direction",
+    "question": "Quelle image le cours utilise-t-il pour une CMDB lancée sans direction ?",
+    "choix": [
+      "Construire l'avion en plein vol",
+      "Bâtir une maison sans fondations",
+      "Naviguer sans boussole",
+      "Cuisiner sans recette"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "« Without setting direction, you are essentially building a plane while it's flying. »",
+    "analogie": "Ouvrir le restaurant en décidant du concept pendant le premier service."
+  },
+  {
+    "id": "q-ccb-gouvernance-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "ccb-gouvernance",
+    "question": "Quel rôle préside le Configuration Control Board (CCB) ?",
+    "choix": [
+      "Le CM Process Owner",
+      "Le CM Executive Sponsor",
+      "Le Configuration Manager",
+      "Le CM Specialist"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "« CM Process Owner and CCB Chair » (Senior Manager). L'Executive Sponsor est le CCB Process Owner.",
+    "analogie": "Le directeur du restaurant préside le comité ; l'investisseur le supervise de plus haut."
+  },
+  {
+    "id": "q-ccb-gouvernance-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "ccb-gouvernance",
+    "question": "Quels sont les rôles du CCB selon le cours ? (plusieurs réponses)",
+    "choix": [
+      "Fixer la direction de la CMDB",
+      "Décider de ce qui est nécessaire pour soutenir les initiatives stratégiques",
+      "Déterminer si la CMDB est prête à être utilisée",
+      "Exécuter les sondes Discovery"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Le CCB fixe la direction, décide de ce qui est nécessaire et détermine si la CMDB est prête ; il ne lance pas Discovery.",
+    "analogie": "Le comité de direction décide ; il ne fait pas lui-même l'inventaire des fours."
+  },
+  {
+    "id": "q-ccb-gouvernance-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "ccb-gouvernance",
+    "question": "Selon le cours, à quoi mène l'inexactitude des données ? (plusieurs réponses)",
+    "choix": [
+      "L'isolement",
+      "La sous-utilisation",
+      "Une meilleure adoption",
+      "La suppression automatique des CI"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "« Data inaccuracy leads to isolation and under utilization. »",
+    "analogie": "Un registre faux, plus personne ne l'ouvre."
+  },
+  {
+    "id": "q-ccb-gouvernance-4",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "ccb-gouvernance",
+    "question": "Qui effectue les tâches quotidiennes sous la direction du CM System Analyst ?",
+    "choix": [
+      "CM Specialist (IT Administrator)",
+      "Configuration Manager (IT Manager)",
+      "CM Executive Sponsor",
+      "CCB Chair"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Le CM Specialist travaille sous la direction du CM CI System Analyst, qui lui travaille avec peu de supervision.",
+    "analogie": "Le commis suit les consignes du sous-chef."
+  },
+  {
+    "id": "q-concevoir-modele-donnees-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "concevoir-modele-donnees",
+    "question": "Quelles recommandations font partie de la conception du modèle de données ? (plusieurs réponses)",
+    "choix": [
+      "Commencer simplement et progressivement",
+      "Utiliser les classes de CI standard (out-of-box)",
+      "Personnaliser largement les CI dès le départ",
+      "Suivre les recommandations du CSDM"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
+    "explication": "Le cours recommande de démarrer simplement, d'utiliser les classes out-of-box, de limiter la personnalisation sans cas métier fort et de suivre le CSDM.",
+    "analogie": "Le plan du registre utilise les catégories standard et n'ajoute pas de cases inutiles."
+  },
+  {
+    "id": "q-concevoir-modele-donnees-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "concevoir-modele-donnees",
+    "question": "Quels outils le cours cite-t-il pour le peuplement automatisé des données ? (plusieurs réponses)",
+    "choix": [
+      "Discovery",
+      "Service Mapping",
+      "Agent Client Collector",
+      "CMDB Query Builder"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Peuplement automatisé : Discovery, Service Mapping, Agent Client Collector, SG Connectors. Query Builder sert à interroger (Insight).",
+    "analogie": "Les inspecteurs remplissent le registre ; le gérant, lui, l'interroge."
+  },
+  {
+    "id": "q-concevoir-modele-donnees-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "concevoir-modele-donnees",
+    "question": "Quand peut-on personnaliser les enregistrements CI ?",
+    "choix": [
+      "Seulement avec un cas d'usage métier solide",
+      "Systématiquement pour chaque classe",
+      "Jamais, c'est bloqué par ServiceNow",
+      "Uniquement pour les CI découverts"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "« Limit customization of CI records without strong business use case. »",
+    "analogie": "On ajoute une case à la fiche seulement si elle sert vraiment."
+  },
+  {
+    "id": "q-trois-piliers-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "trois-piliers",
+    "question": "Dans quel pilier le cours range-t-il le CMDB Health Dashboard ?",
+    "choix": [
+      "Govern",
+      "Ingest",
+      "Insight",
+      "Aucun"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Govern : CI Class Manager, CMDB Health Dashboard, CMDB Data Manager, Duplicate CI Remediator, De-duplication Templates.",
+    "analogie": "Le bulletin d'hygiène sert à tenir le registre propre."
+  },
+  {
+    "id": "q-trois-piliers-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "trois-piliers",
+    "question": "Quels outils appartiennent au pilier Ingest ? (plusieurs réponses)",
+    "choix": [
+      "Service Graph Connectors",
+      "IntegrationHub ETL",
+      "Import Sets",
+      "Unified Map"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Ingest : Discovery, Service Mapping, Agent Client Collector, Service Graph Connectors, IntegrationHub ETL, Import Sets. Unified Map = Insight.",
+    "analogie": "Les livraisons qui entrent, pas le plan que consulte le gérant."
+  },
+  {
+    "id": "q-trois-piliers-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "trois-piliers",
+    "question": "Quelles activités relèvent du pilier Govern ? (plusieurs réponses)",
+    "choix": [
+      "Remédiation des doublons",
+      "Attestation, certification et audit",
+      "Alignement sur le CSDM",
+      "Recherche en langage naturel"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Govern : exactitude, structure, cycle de vie, doublons, attestation/certification/audit, alignement CSDM. La recherche relève d'Insight.",
+    "analogie": "Tenir le registre propre et conforme au plan."
+  },
+  {
+    "id": "q-trois-piliers-4",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "trois-piliers",
+    "question": "Dans quel pilier le cours place-t-il le CI Class Manager ?",
+    "choix": [
+      "Govern",
+      "Insight",
+      "Ingest",
+      "CMDB Workspace uniquement"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Le CI Class Manager est listé dans Govern (aligner les données sur la structure et les définitions).",
+    "analogie": "Le classeur des catégories d'équipements sert à garder le registre bien rangé."
+  },
+  {
+    "id": "q-service-graph-connectors-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "service-graph-connectors",
+    "question": "Les Service Graph Connectors nécessitent-ils une licence payante ?",
+    "choix": [
+      "Oui, via le ServiceNow Store, sauf le connecteur Microsoft SCCM qui est gratuit",
+      "Non, ils font partie de l'instance de base",
+      "Oui, tous sans exception",
+      "Non, sauf le connecteur AWS"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Requires paid license: Yes, via le ServiceNow Store (except Microsoft SCCM connector which is free).",
+    "analogie": "Les bons de livraison automatiques des fournisseurs sont un abonnement, sauf celui de SCCM offert."
+  },
+  {
+    "id": "q-service-graph-connectors-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "service-graph-connectors",
+    "question": "Que faut-il pour mettre en œuvre un Service Graph Connector ?",
+    "choix": [
+      "Les identifiants (credentials) de l'application cible",
+      "Un script de transformation personnalisé",
+      "Désactiver l'IRE",
+      "Un import CSV manuel"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Additional considerations: target application credentials are required.",
+    "analogie": "Il faut donner au livreur la clé du dépôt du fournisseur."
+  },
+  {
+    "id": "q-service-graph-connectors-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "service-graph-connectors",
+    "question": "Par quel moteur les données des Service Graph Connectors passent-elles avant d'entrer dans la CMDB ?",
+    "choix": [
+      "IRE (Identification and Reconciliation Engine)",
+      "Transform map",
+      "CMDB Query Builder",
+      "Unified Map"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Le schéma montre les connecteurs → IRE → CMDB, avec réconciliation multisource activée.",
+    "analogie": "Le contrôleur à la porte vérifie chaque livraison."
+  },
+  {
+    "id": "q-integrationhub-etl-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "integrationhub-etl",
+    "question": "Que signifie ETL dans IntegrationHub ETL ?",
+    "choix": [
+      "Extract, Transform, Load",
+      "Evaluate, Test, Launch",
+      "Export, Track, Link",
+      "Extract, Translate, Log"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "ServiceNow IntegrationHub ETL (Extract, Transform, Load).",
+    "analogie": "Recevoir, préparer, ranger."
+  },
+  {
+    "id": "q-integrationhub-etl-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "integrationhub-etl",
+    "question": "Quelles affirmations sur IntegrationHub ETL sont vraies ? (plusieurs réponses)",
+    "choix": [
+      "Les données sont normalisées selon le modèle ServiceNow avant chargement",
+      "Il peut aussi alimenter des tables de base hors CMDB",
+      "Il exige une licence payante",
+      "Les données passent par l'IRE"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
+    "explication": "Transformation et normalisation avant chargement, tables non-CMDB supportées, passage par l'IRE ; licence payante : non.",
+    "analogie": "La cuisine de préparation calibre tout avant le contrôle et le rangement."
+  },
+  {
+    "id": "q-import-sets-transform-maps-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "import-sets-transform-maps",
+    "question": "Quelle méthode d'import n'utilise PAS l'IRE par défaut ?",
+    "choix": [
+      "Import Sets et Transform Maps",
+      "Service Graph Connectors",
+      "IntegrationHub ETL",
+      "Aucune, toutes utilisent l'IRE"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Le cours précise que les Import Sets / Transform Maps n'utilisent pas, par défaut, l'Identification and Reconciliation Engine.",
+    "analogie": "Les cartons déposés dans le sas contournent le contrôleur de la porte."
+  },
+  {
+    "id": "q-import-sets-transform-maps-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "import-sets-transform-maps",
+    "question": "À quoi sert une transform map (field mapping) ?",
+    "choix": [
+      "Définir la correspondance entre les champs de la table d'Import Set et ceux des tables CMDB cibles",
+      "Stocker temporairement les données",
+      "Visualiser les dépendances",
+      "Fusionner les doublons"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Field mapping : comment les champs de l'Import Set Table correspondent aux champs des tables CMDB cibles. Le stockage temporaire, c'est l'Import Set.",
+    "analogie": "Dire quelle étiquette du carton va dans quel rayon."
+  },
+  {
+    "id": "q-import-sets-transform-maps-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "import-sets-transform-maps",
+    "question": "Quelles sources les Import Sets peuvent-ils mettre en attente (staging) ? (plusieurs réponses)",
+    "choix": [
+      "Fichiers CSV",
+      "Feuilles Excel",
+      "Bases de données",
+      "API"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Data staging : CSV, Excel, bases de données ou API.",
+    "analogie": "Le sas accepte tous les types de cartons."
+  },
+  {
+    "id": "q-cmdb-health-dashboard-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "cmdb-health-dashboard",
+    "question": "Quels scorecards le CMDB Health Dashboard résume-t-il ? (plusieurs réponses)",
+    "choix": [
+      "Completeness",
+      "Correctness",
+      "Compliance",
+      "Cost"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Health scorecard : Completeness, Correctness et Compliance.",
+    "analogie": "Fiches remplies, justes et conformes."
+  },
+  {
+    "id": "q-cmdb-health-dashboard-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "cmdb-health-dashboard",
+    "question": "Où accède-t-on au CMDB Health Dashboard ?",
+    "choix": [
+      "CMDB Workspace, onglet Management",
+      "CMDB Workspace, onglet Home",
+      "ServiceNow Store, licence payante",
+      "System Import Sets"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Part of a base instance, accessible from CMDB Workspace under the Management tab.",
+    "analogie": "Le bulletin d'hygiène est rangé dans le bureau de gestion."
+  },
+  {
+    "id": "q-cmdb-data-manager-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "cmdb-data-manager",
+    "question": "Quelle politique du CMDB Data Manager crée des tâches pour vérifier l'existence physique de l'infrastructure ?",
+    "choix": [
+      "Attestation policies",
+      "Data certification",
+      "Lifecycle policies",
+      "De-duplication templates"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Attestation policies : automated task creation to check for the physical existence of IT infrastructure and applications.",
+    "analogie": "Envoyer quelqu'un vérifier que le four est bien là."
+  },
+  {
+    "id": "q-cmdb-data-manager-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "cmdb-data-manager",
+    "question": "Quelles actions couvrent les lifecycle policies du CMDB Data Manager ? (plusieurs réponses)",
+    "choix": [
+      "Retrait (retire)",
+      "Archivage",
+      "Suppression",
+      "Découverte réseau"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Lifecycle policies : retirement, archiving, deletion.",
+    "analogie": "Mettre à la retraite, archiver ou détruire une fiche."
+  },
+  {
+    "id": "q-cmdb-data-manager-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "cmdb-data-manager",
+    "question": "Que fait la data certification ?",
+    "choix": [
+      "Valide automatiquement les données de la CMDB selon des règles prédéfinies",
+      "Vérifie physiquement l'existence des équipements",
+      "Importe des données depuis AWS",
+      "Visualise les dépendances"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Data certification : validation automatique selon des règles prédéfinies pour l'exactitude et la complétude.",
+    "analogie": "Le contrôle automatique des fiches, sans se déplacer."
+  },
+  {
+    "id": "q-dedoublonnage-ci-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "dedoublonnage-ci",
+    "question": "Quel est l'intérêt principal des De-duplication Templates ?",
+    "choix": [
+      "Résoudre les doublons en masse plutôt qu'un par un",
+      "Découvrir de nouveaux CI",
+      "Créer des classes personnalisées",
+      "Visualiser les dépendances"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Les templates permettent à l'administrateur de résoudre automatiquement les doublons en masse (bulk) versus un à la fois.",
+    "analogie": "La grande opération de tri planifiée, pas le cas par cas."
+  },
+  {
+    "id": "q-dedoublonnage-ci-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "dedoublonnage-ci",
+    "question": "Quels attributs peut-on utiliser comme matching rules d'un template de dédoublonnage ? (plusieurs réponses)",
+    "choix": [
+      "Class",
+      "Location",
+      "Manufacturer",
+      "Model"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Matching rules : class, location, manufacturer and model.",
+    "analogie": "Même catégorie, même cuisine, même marque, même modèle : même four."
+  },
+  {
+    "id": "q-dedoublonnage-ci-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "dedoublonnage-ci",
+    "question": "Comment le Duplicate CI Remediation Wizard détecte-t-il les doublons potentiels ?",
+    "choix": [
+      "Automatiquement, selon des règles comme des attributs ou relations correspondants",
+      "Uniquement sur déclaration manuelle",
+      "Par un import CSV",
+      "Via le CMDB Query Builder"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Automated detection : identification automatique selon des règles et critères (attributs ou relations correspondants).",
+    "analogie": "L'assistant repère seul les fiches suspectes, puis vous guide."
+  },
+  {
+    "id": "q-outils-insight-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "outils-insight",
+    "question": "Quel outil permet de construire des requêtes par glisser-déposer, sans SQL, sur des tables CMDB et hors CMDB ?",
+    "choix": [
+      "CMDB Query Builder",
+      "Unified Map",
+      "Intelligent Search",
+      "CMDB Health Dashboard"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "CMDB Query Builder : interface drag-and-drop, sans scripting ni SQL, filtres AND/OR.",
+    "analogie": "Assembler des blocs pour poser une question précise au registre."
+  },
+  {
+    "id": "q-outils-insight-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "outils-insight",
+    "question": "Quel outil utilise des requêtes en langage naturel (NLQ) ?",
+    "choix": [
+      "Intelligent Search",
+      "CMDB Query Builder",
+      "Unified Map",
+      "IntegrationHub ETL"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Intelligent Search : everyday language in the form of natural language query (NLQ), propulsé par l'IA.",
+    "analogie": "Demander à voix haute au registre."
+  },
+  {
+    "id": "q-outils-insight-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "outils-insight",
+    "question": "Quel outil sert à visualiser les dépendances entre CI et l'impact d'un changement ou d'un incident ?",
+    "choix": [
+      "Unified Map",
+      "CMDB Data Manager",
+      "Import Sets",
+      "De-duplication Templates"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Unified Map : dependency mapping pour voir comment les CI sont connectés et l'impact des changements ou incidents.",
+    "analogie": "Le plan interactif des branchements."
+  },
+  {
+    "id": "q-outils-insight-4",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "outils-insight",
+    "question": "Que proposent les CMDB and CSDM Data Foundations Dashboards ? (plusieurs réponses)",
+    "choix": [
+      "Visibilité sur la qualité des données",
+      "Suivi de la conformité aux politiques",
+      "Playbooks de bonnes pratiques",
+      "Import de données AWS"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Visibility, policy compliance, playbooks ; l'import relève d'Ingest.",
+    "analogie": "L'audit de conformité au plan, avec ses fiches réflexes."
+  },
+  {
+    "id": "q-licences-acces-outils-1",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "licences-acces-outils",
+    "question": "Parmi ces outils, lequel exige une licence payante ?",
+    "choix": [
+      "Service Graph Connectors (hors SCCM)",
+      "IntegrationHub ETL",
+      "CMDB Health Dashboard",
+      "Import Sets"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Seuls les Service Graph Connectors sont payants (Store), à l'exception du connecteur Microsoft SCCM.",
+    "analogie": "Le seul supplément de la carte."
+  },
+  {
+    "id": "q-licences-acces-outils-2",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "licences-acces-outils",
+    "question": "Dans quel onglet du CMDB Workspace trouve-t-on Intelligent Search ?",
+    "choix": [
+      "Home",
+      "Management",
+      "Insights",
+      "Store"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Intelligent Search : accessible from CMDB Workspace under the Home tab. Health Dashboard, Query Builder et Unified Map : onglet Management.",
+    "analogie": "La recherche est à l'accueil ; les outils de gestion sont dans le bureau du gérant."
+  },
+  {
+    "id": "q-licences-acces-outils-3",
+    "theme": "cmdb-construire-exploiter",
+    "notion": "licences-acces-outils",
+    "question": "Quels outils sont accessibles depuis l'onglet Management du CMDB Workspace ? (plusieurs réponses)",
+    "choix": [
+      "CMDB Health Dashboard",
+      "CMDB Query Builder",
+      "Unified Map",
+      "Intelligent Search"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Health Dashboard, Query Builder et Unified Map : Management. Intelligent Search : Home.",
+    "analogie": "Le bureau du gérant regroupe les outils de pilotage."
   }
 ]

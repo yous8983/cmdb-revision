@@ -1,5 +1,11 @@
 # Changelog
 
+## [v3] – 2026-11-20
+- Nouveau thème « Construire et exploiter la CMDB » (leçons 5 à 7), analogie : le restaurant qu'on ouvre puis qu'on fait tourner.
+- 14 notions, 41 questions : cas d'usage hors IT, 4 étapes vers une CMDB fiable, fixer la direction, CCB et rôles, conception du modèle de données, trois piliers Ingest / Govern / Insight, Service Graph Connectors, IntegrationHub ETL, Import Sets / Transform Maps, CMDB Health Dashboard, CMDB Data Manager, dédoublonnage, outils Insight, licences et accès.
+- Total : 3 thèmes, 25 notions, 75 questions.
+- CACHE_VERSION → 3.
+
 ## [v2] – 2026-11-20
 - Nouveaux thèmes : « Plateforme ServiceNow » (analogie : la maison) et « Introduction à la CMDB et au CSDM » (analogie : le restaurant).
 - 11 notions, 34 questions, tirées des photos de cours du 20/11 :

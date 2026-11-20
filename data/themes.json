@@ -10,5 +10,11 @@
     "titre": "Introduction à la CMDB et au CSDM",
     "description": "Cours CMDB Fundamentals, leçons 2 à 4 : modèle CSDM, applications, classes, références, attributs, Asset vs CI et cycles de vie.",
     "analogie_fil_rouge": "La CMDB est le registre d'un restaurant. Foundation Data = registre administratif (personnel, adresses, contrats) ; Infrastructure Data = équipements (fours, frigos, caisse) ; références = étiquettes collées sur un équipement qui renvoient au registre ; relations = branchements réels entre équipements. Côté client : la carte et ses formules (Business Service / Offering). Côté cuisine : la maintenance interne (Technology Management Service). La recette (Business Application) n'est pas la station qui la produit ce soir (Application Service / Service Instance), ni le four installé (Application)."
+  },
+  {
+    "id": "cmdb-construire-exploiter",
+    "titre": "Construire et exploiter la CMDB",
+    "description": "Cours CMDB Fundamentals, leçons 5 à 7 : cas d'usage, étapes vers une CMDB fiable, gouvernance (CCB), modèle de données, trois piliers Ingest / Govern / Insight et outils associés.",
+    "analogie_fil_rouge": "On ouvre puis on fait tourner le restaurant et son registre. Fixer la direction = choisir le concept avant d'acheter quoi que ce soit ; le CCB = le comité de direction ; le modèle de données = le plan du registre. Ensuite trois métiers : approvisionner le registre (Ingest : les livraisons entrent, contrôlées à la porte par l'IRE), le tenir propre (Govern : inspections d'hygiène, doublons, mise au rebut) et s'en servir (Insight : le gérant interroge, visualise, pilote)."
   }
 ]
