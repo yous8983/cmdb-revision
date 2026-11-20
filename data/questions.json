@@ -1867,5 +1867,75 @@
     ],
     "explication": "Priorités : 100 serial_number + serial_number_type (table Serial Number), 200 serial_number, 300 name, 400 mac_address + name (Network Adapter).",
     "analogie": "Dernier recours du guichetier : l'adresse réseau du four."
+  },
+  {
+    "id": "q-regles-reconciliation-1",
+    "theme": "configurer-cmdb",
+    "notion": "regles-reconciliation",
+    "question": "Combien de règles de réconciliation ServiceNow fournit-il dans une instance de base ?",
+    "choix": [
+      "Aucune",
+      "Une par classe",
+      "Des centaines, comme pour l'identification",
+      "Uniquement pour la classe Hardware"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "ServiceNow ne fournit aucune règle de réconciliation dans une instance de base : leur configuration dépend trop de l'environnement du client. À l'inverse, des centaines de règles d'identification sont fournies.",
+    "analogie": "La liste des livreurs autorisés est vierge à l'ouverture : chaque restaurant l'écrit selon ses fournisseurs."
+  },
+  {
+    "id": "q-regles-reconciliation-2",
+    "theme": "configurer-cmdb",
+    "notion": "regles-reconciliation",
+    "question": "Quelle est la bonne pratique pour les règles de réconciliation ?",
+    "choix": [
+      "Configurer des règles pour chaque source de données autorisée à mettre à jour des CI",
+      "Ne configurer qu'une règle globale pour toute la CMDB",
+      "Laisser la dernière source écrire",
+      "Les définir uniquement pour les CI logiques"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "ServiceNow encourage à configurer des règles de réconciliation pour chaque source autorisée à mettre à jour des CI.",
+    "analogie": "Chaque livreur autorisé doit figurer sur la liste, avec ce qu'il a le droit de modifier."
+  },
+  {
+    "id": "q-regles-reconciliation-3",
+    "theme": "configurer-cmdb",
+    "notion": "regles-reconciliation",
+    "question": "Quels sont les cas d'usage des règles de réconciliation ? (plusieurs réponses)",
+    "choix": [
+      "Data Accuracy",
+      "Conflict Resolution",
+      "Data Prioritization",
+      "Data Discovery"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Le cours cite Data Accuracy, Conflict Resolution et Data Prioritization.",
+    "analogie": "Données fiables, conflits tranchés, priorité entre livreurs."
+  },
+  {
+    "id": "q-regles-reconciliation-4",
+    "theme": "configurer-cmdb",
+    "notion": "regles-reconciliation",
+    "question": "Bien configurées, quelle part du processus les règles de réconciliation gèrent-elles selon le cours ?",
+    "choix": [
+      "90 %",
+      "50 %",
+      "100 %",
+      "10 %"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Elles peuvent gérer 90 % du processus pour déterminer les sources fiables et la source de vérité ultime d'une classe, d'un ensemble de classes et/ou d'attributs.",
+    "analogie": "La liste tranche presque tous les désaccords entre livreurs, pas absolument tous."
   }
 ]

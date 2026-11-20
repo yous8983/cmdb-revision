@@ -1,6 +1,6 @@
 /* Service worker — fonctionnement hors ligne.
    ⚠ Incrémenter CACHE_VERSION à chaque modification de code ou de contenu. */
-const CACHE_VERSION = 6;
+const CACHE_VERSION = 7;
 const CACHE_NAME = 'cmdb-revision-v' + CACHE_VERSION;
 
 const ASSETS = [

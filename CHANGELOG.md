@@ -1,5 +1,10 @@
 # Changelog
 
+## [v7] – 2026-11-20
+- Thème « Configurer la CMDB » (leçon 4/8) : processus et règles de réconciliation. 1 notion, 4 questions.
+- Total : 4 thèmes, 34 notions, 109 questions.
+- CACHE_VERSION → 7.
+
 ## [v6] – 2026-11-20
 - Thème « Configurer la CMDB » (leçons 2 et 3/8) : APIs et flux d'intégration de l'IRE, processus et règles d'identification, bénéfices des règles d'identification, règles Hardware (indépendante) et Application (dépendante). 4 notions, 15 questions.
 - Total : 4 thèmes, 33 notions, 105 questions.

@@ -849,5 +849,34 @@
       "Hardware Rule : serial (100, 200), name (300), MAC + name sur Network Adapter (400)."
     ],
     "source": "CMDB Fundamentals, « Configure the CMDB », leçon 3/8 – vidéo « Identification rules overview » (Identifier Entries Table) et onglets Hardware Rule / Application Rule — info manquante : critères complets de l'Application Rule."
+  },
+  {
+    "id": "regles-reconciliation",
+    "theme": "configurer-cmdb",
+    "titre": "Processus et règles de réconciliation",
+    "definition": "Dans le processus de réconciliation, des règles de réconciliation (reconciliation rules) déterminent SI et COMMENT les données entrantes doivent mettre à jour les CI existants de la CMDB. ServiceNow ne fournit AUCUNE règle de réconciliation dans une instance de base, car elles dépendent de l'environnement du client et des classes qu'il gère.",
+    "points_cles": [
+      "Bonne pratique : configurer des règles de réconciliation pour CHAQUE source de données autorisée à mettre à jour des CI.",
+      "Bien configurées, elles gèrent 90 % du processus : déterminer quelles sources sont fiables et identifier la source de vérité ultime (authoritative source of truth) pour une classe, un ensemble de classes et/ou des attributs de CI.",
+      "Data Accuracy : la CMDB contient les données les plus fiables et à jour.",
+      "Conflict Resolution : résoudre les conflits entre données de sources différentes.",
+      "Data Prioritization : décider quelle source prime quand plusieurs sources renseignent la même classe et/ou les mêmes attributs.",
+      "Comprendre et contrôler quelles sources mettent à jour la CMDB est essentiel pour avoir confiance dans ses données.",
+      "Dans le flux IRE, la réconciliation intervient après l'identification, à chaque « Update CI »."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le guichetier tient la liste des livreurs autorisés et, pour chaque case de la fiche d'un four, le livreur qui fait foi : pour le numéro de série, l'inspecteur ; pour le contrat, le fournisseur. Si deux livreurs ne sont pas d'accord, c'est cette liste qui tranche. Cette liste est vierge à l'ouverture du restaurant : c'est à lui de l'écrire, car elle dépend de ses propres fournisseurs.",
+      "fonction": "Arbitrer entre les sources : qui a le droit d'écrire quoi, et qui gagne en cas de conflit.",
+      "limite": "Le cours parle de 90 % du processus géré par les règles : elles ne règlent pas tout. Et contrairement à une liste unique, les règles se définissent par classe, ensemble de classes et/ou attribut."
+    },
+    "pieges_examen": [
+      "Règles d'IDENTIFICATION : des centaines fournies out-of-the-box. Règles de RÉCONCILIATION : AUCUNE dans une instance de base.",
+      "Une règle de réconciliation par source autorisée à mettre à jour des CI.",
+      "Reconciliation = SI et COMMENT mettre à jour ; Identification = le CI existe-t-il déjà ?",
+      "3 cas d'usage : Data Accuracy, Conflict Resolution, Data Prioritization.",
+      "90 % du processus géré quand les règles sont bien configurées."
+    ],
+    "source": "CMDB Fundamentals, « Configure the CMDB », leçon 4/8 – « Reconciliation process » et « Why configure Reconciliation rules? » — info manquante : début de page et suite de l'encadré d'information."
   }
 ]
