@@ -1,5 +1,10 @@
 # Changelog
 
+## [v6] – 2026-11-20
+- Thème « Configurer la CMDB » (leçons 2 et 3/8) : APIs et flux d'intégration de l'IRE, processus et règles d'identification, bénéfices des règles d'identification, règles Hardware (indépendante) et Application (dépendante). 4 notions, 15 questions.
+- Total : 4 thèmes, 33 notions, 105 questions.
+- CACHE_VERSION → 6.
+
 ## [v5] – 2026-11-20
 - Thème « Configurer la CMDB » (leçon 2/8) : IRE (rôle et 3 cas d'usage) et alimentation de la CMDB via l'IRE (quelle source pour quels CI). 2 notions, 7 questions.
 - Total : 4 thèmes, 29 notions, 90 questions.

@@ -1601,5 +1601,271 @@
     ],
     "explication": "Foundation data (locations, groups, users) : LDAP, Active Directory, 3rd party.",
     "analogie": "Le registre du personnel vient de l'annuaire, pas de l'inspecteur des équipements."
+  },
+  {
+    "id": "q-ire-api-flux-1",
+    "theme": "configurer-cmdb",
+    "notion": "ire-api-flux",
+    "question": "Dans le flux d'intégration via l'IRE, quel est l'ordre des étapes ?",
+    "choix": [
+      "Identification → Reconciliation → API layer → CMDB",
+      "Reconciliation → Identification → CMDB",
+      "API layer → CMDB → Identification",
+      "Deduplication → Identification → CMDB"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Le schéma « Integration flow via the IRE » : Identification (règles par classe), puis Reconciliation (classe et attribut), puis API layer, puis CMDB.",
+    "analogie": "Le guichetier reconnaît d'abord l'objet, puis décide qui peut modifier quoi, puis on range."
+  },
+  {
+    "id": "q-ire-api-flux-2",
+    "theme": "configurer-cmdb",
+    "notion": "ire-api-flux",
+    "question": "À quel niveau s'appliquent les règles de réconciliation ? (plusieurs réponses)",
+    "choix": [
+      "Au niveau de la classe de CI",
+      "Au niveau de l'attribut",
+      "Au niveau de l'utilisateur",
+      "Au niveau de l'instance entière uniquement"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "« Reconciliation rules at CI class level and attribute level ». Les règles d'identification, elles, sont par classe.",
+    "analogie": "Le droit de modifier se décide par catégorie et case par case."
+  },
+  {
+    "id": "q-ire-api-flux-3",
+    "theme": "configurer-cmdb",
+    "notion": "ire-api-flux",
+    "question": "Pourquoi les sources de données appellent-elles les APIs de l'IRE au lieu d'écrire directement dans la CMDB ? (plusieurs réponses)",
+    "choix": [
+      "Pour éviter les CI en double",
+      "Pour éviter les mises à jour par des sources non autorisées",
+      "Pour contourner les règles d'identification",
+      "Pour supprimer les Foundation data"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "L'IRE impose son processus avant le stockage, ce qui empêche doublons et mises à jour de sources non autorisées.",
+    "analogie": "Aucun livreur n'a la clé de la réserve."
+  },
+  {
+    "id": "q-ire-api-flux-4",
+    "theme": "configurer-cmdb",
+    "notion": "ire-api-flux",
+    "question": "Quelles sont les quatre fonctionnalités de l'IRE présentées dans le cours ? (plusieurs réponses)",
+    "choix": [
+      "Identification",
+      "Reconciliation",
+      "Deduplication",
+      "Reclassification",
+      "Discovery"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Onglets « IRE features » : Identification, Reconciliation, Deduplication, Reclassification. Discovery est une source de données.",
+    "analogie": "Reconnaître, arbitrer, dédoublonner, reclasser : les quatre métiers du guichetier."
+  },
+  {
+    "id": "q-ire-processus-identification-1",
+    "theme": "configurer-cmdb",
+    "notion": "ire-processus-identification",
+    "question": "Dans l'exemple de flux IRE du cours, que se passe-t-il si le CI ne correspond ni sur le Serial Number, ni sur le Name, ni sur la MAC Address ?",
+    "choix": [
+      "Un nouveau CI est créé (Create CI)",
+      "Le CI existant est mis à jour",
+      "Les données sont rejetées",
+      "Le CI est reclassé"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Serial ? non → Name ? non → MAC ? non → Create CI.",
+    "analogie": "Aucune correspondance dans le registre : c'est un nouveau four, nouvelle fiche."
+  },
+  {
+    "id": "q-ire-processus-identification-2",
+    "theme": "configurer-cmdb",
+    "notion": "ire-processus-identification",
+    "question": "Que se passe-t-il après un « Update CI » dans le flux IRE ?",
+    "choix": [
+      "Le processus de réconciliation détermine si et comment les données entrantes mettent à jour les données existantes",
+      "Le CI est supprimé puis recréé",
+      "Discovery relance un scan",
+      "Le CI est reclassé automatiquement"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Chaque Update CI mène au Reconciliation Process : determines if and how incoming data updates existing data in the CMDB.",
+    "analogie": "Une fois le four reconnu, on décide quelles cases ce livreur peut modifier."
+  },
+  {
+    "id": "q-ire-processus-identification-3",
+    "theme": "configurer-cmdb",
+    "notion": "ire-processus-identification",
+    "question": "Quelle condition une règle d'identification doit-elle respecter ?",
+    "choix": [
+      "Avoir au moins une identifier entry active",
+      "Avoir au moins cinq identifier entries",
+      "Être définie au niveau de l'attribut",
+      "Être de type Lookup"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Écran Identification Rule : la règle inclut au moins une entrée d'identifiant active.",
+    "analogie": "Le guichetier doit avoir au moins un critère pour reconnaître un objet."
+  },
+  {
+    "id": "q-ire-processus-identification-4",
+    "theme": "configurer-cmdb",
+    "notion": "ire-processus-identification",
+    "question": "Quel est le but du processus d'identification ?",
+    "choix": [
+      "Déterminer si un CI existe déjà dans la CMDB ou s'il est nouveau et doit être ajouté",
+      "Décider quelle source peut modifier un attribut",
+      "Changer la classe d'un CI",
+      "Supprimer les CI obsolètes"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Identification : identifier de façon unique le CI pour savoir s'il existe déjà ou s'il faut l'ajouter. Décider quelle source modifie quoi relève de la réconciliation.",
+    "analogie": "Reconnaître le four, pas arbitrer entre les livreurs."
+  },
+  {
+    "id": "q-regles-identification-benefices-1",
+    "theme": "configurer-cmdb",
+    "notion": "regles-identification-benefices",
+    "question": "Quels sont les bénéfices des règles d'identification selon le cours ? (plusieurs réponses)",
+    "choix": [
+      "Data Integrity",
+      "Consistency",
+      "Efficiency",
+      "Improved Data Quality",
+      "Réduction des coûts de licence"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Le cours cite quatre bénéfices : Data Integrity, Consistency, Efficiency, Improved Data Quality.",
+    "analogie": "Une fiche par four, même méthode pour tous, sans effort manuel, registre fiable."
+  },
+  {
+    "id": "q-regles-identification-benefices-2",
+    "theme": "configurer-cmdb",
+    "notion": "regles-identification-benefices",
+    "question": "Quel bénéfice correspond à « une méthode centralisée pour identifier les CI à travers les différentes sources et méthodes de découverte » ?",
+    "choix": [
+      "Consistency",
+      "Efficiency",
+      "Data Integrity",
+      "Improved Data Quality"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Consistency : centralized method for identifying CIs across different data sources and discovery methods.",
+    "analogie": "La même règle au guichet, quel que soit le livreur."
+  },
+  {
+    "id": "q-regles-identification-benefices-3",
+    "theme": "configurer-cmdb",
+    "notion": "regles-identification-benefices",
+    "question": "Quel bénéfice correspond à « empêcher les CI en double » ?",
+    "choix": [
+      "Data Integrity",
+      "Consistency",
+      "Efficiency",
+      "Improved Data Quality"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Data Integrity : prevents duplicate CIs, ensuring each CI is unique and accurately represented.",
+    "analogie": "Jamais deux fiches pour le même four."
+  },
+  {
+    "id": "q-regles-hardware-application-1",
+    "theme": "configurer-cmdb",
+    "notion": "regles-hardware-application",
+    "question": "Quelle règle d'identification est de type « Dependent » dans le cours ?",
+    "choix": [
+      "Application Rule",
+      "Hardware Rule",
+      "Toutes les règles out-of-the-box",
+      "Aucune"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "L'écran de l'Application Rule indique « Dependent » ; la Hardware Rule est « Independent ».",
+    "analogie": "La recette se reconnaît par la station qui la prépare ; le four se reconnaît seul."
+  },
+  {
+    "id": "q-regles-hardware-application-2",
+    "theme": "configurer-cmdb",
+    "notion": "regles-hardware-application",
+    "question": "Sur quelle table l'Application Rule par défaut est-elle définie ?",
+    "choix": [
+      "Application [cmdb_ci_appl]",
+      "Business Application [cmdb_ci_business_app]",
+      "Application Service [cmdb_ci_service_auto]",
+      "Hardware [cmdb_ci_hardware]"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "« It is defined on the Application [cmdb_ci_appl] table. »",
+    "analogie": "La règle des « fours installés », pas des recettes."
+  },
+  {
+    "id": "q-regles-hardware-application-3",
+    "theme": "configurer-cmdb",
+    "notion": "regles-hardware-application",
+    "question": "Où peut-on consulter ou configurer les règles d'identification ? (plusieurs réponses)",
+    "choix": [
+      "Module CI Identifiers (navigation de gauche)",
+      "Onglet Identification Rule d'une classe dans le CI Class Manager",
+      "CMDB Query Builder",
+      "Import Set Table"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "Le cours : via le module CI Identifiers ou l'onglet Identification Rule de n'importe quelle classe dans le CI Class Manager.",
+    "analogie": "Le guichet des règles ou la fiche type de chaque catégorie."
+  },
+  {
+    "id": "q-regles-hardware-application-4",
+    "theme": "configurer-cmdb",
+    "notion": "regles-hardware-application",
+    "question": "Dans la Hardware Rule, quels critères correspondent à l'identifier entry de priorité 400 ?",
+    "choix": [
+      "mac_address et name, sur la table Network Adapter",
+      "serial_number seul",
+      "name seul",
+      "serial_number et serial_number_type"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Priorités : 100 serial_number + serial_number_type (table Serial Number), 200 serial_number, 300 name, 400 mac_address + name (Network Adapter).",
+    "analogie": "Dernier recours du guichetier : l'adresse réseau du four."
   }
 ]

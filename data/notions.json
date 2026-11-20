@@ -744,5 +744,110 @@
       "Foundation data : LDAP, Active Directory, sources tierces."
     ],
     "source": "CMDB Fundamentals, module « Configure the CMDB », leçon 2/8 – schéma « Ingesting data into the CMDB via the IRE »"
+  },
+  {
+    "id": "ire-api-flux",
+    "theme": "configurer-cmdb",
+    "titre": "IRE : APIs centralisées et flux d'intégration",
+    "definition": "L'IRE fournit un ensemble centralisé d'APIs compatibles avec les outils de découverte et d'intégration (Discovery, Service Graph Connectors, IntegrationHub ETL…). Il impose le processus IRE avant tout stockage : les sources n'écrivent pas directement dans la CMDB, elles appellent d'abord ces APIs, ce qui évite les incohérences comme les CI en double ou les mises à jour par des sources non autorisées.",
+    "points_cles": [
+      "Sources du schéma : Discovery, Service Graph, API tierce, IntegrationHub ETL / Import Set.",
+      "Étape 1 – Identification : règles d'identification PAR CLASSE de CI.",
+      "Étape 2 – Reconciliation : règles de réconciliation au niveau de la CLASSE et de l'ATTRIBUT.",
+      "Puis API Layer → CMDB.",
+      "Les 4 fonctionnalités de l'IRE (onglets du cours) : Identification, Reconciliation, Deduplication, Reclassification.",
+      "Bien utiliser l'IRE améliore la qualité et la fiabilité de la CMDB : meilleures décisions, opérations IT simplifiées."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Les livreurs n'ont pas la clé de la réserve : tous passent par le même guichet (les APIs de l'IRE). Le guichetier vérifie d'abord si l'objet livré est déjà connu (identification), puis décide quelles cases de la fiche ce livreur a le droit de modifier (réconciliation), et seulement ensuite on range.",
+      "fonction": "Garantir qu'aucune source ne contourne les contrôles : pas de doublon, pas de mise à jour par une source non autorisée.",
+      "limite": "Ce schéma fait passer « IntegrationHub ETL / Import Set » par l'IRE, alors que la leçon 7 précisait que les Import Sets n'utilisent PAS l'IRE par défaut : un Import Set doit être configuré pour l'utiliser."
+    },
+    "pieges_examen": [
+      "Ordre : Identification PUIS Reconciliation, puis API layer, puis CMDB.",
+      "Identification = par classe ; Reconciliation = par classe ET par attribut.",
+      "Les sources n'écrivent jamais directement dans la CMDB : elles appellent les APIs de l'IRE.",
+      "4 fonctionnalités : Identification, Reconciliation, Deduplication, Reclassification."
+    ],
+    "source": "CMDB Fundamentals, « Configure the CMDB », leçon 2/8 – « Data ingestion via the IRE », « Integration flow via the IRE » et onglets « IRE features » — info manquante : contenu des onglets Reconciliation, Deduplication, Reclassification."
+  },
+  {
+    "id": "ire-processus-identification",
+    "theme": "configurer-cmdb",
+    "titre": "Processus d'identification et règles d'identification",
+    "definition": "L'identification est le processus qui identifie de façon unique les CI pour déterminer si un CI existe déjà dans la CMDB ou s'il s'agit d'un nouveau CI à ajouter. Elle s'appuie sur des règles d'identification (identification rules) qui reconnaissent les CI d'après leurs attributs, de façon cohérente entre les différentes sources. Elle a lieu avant toute mise à jour d'un CI dans la CMDB.",
+    "points_cles": [
+      "Exemple de flux : correspondance sur le Serial Number ? Oui → Update CI. Non → correspondance sur le Name ? Oui → Update CI. Non → correspondance sur la MAC Address ? Oui → Update CI. Non → Create CI.",
+      "Après chaque « Update CI » intervient le processus de réconciliation, qui détermine SI et COMMENT les données entrantes mettent à jour les données existantes.",
+      "Règle d'identification (écran) : indique si le CI peut être identifié indépendamment (Independent) ou non ; elle doit avoir au moins une entrée d'identifiant (identifier entry) active.",
+      "Identifier entries : attributs critères qui identifient de façon unique le CI. Exemple de la règle Hardware : Product instance identifier (priorité 90), Serial Number via table de lookup (100), Serial number (200), Name (300), MAC Address + Name via la table Network Adapter (400).",
+      "Types d'identifier entries visibles : Standard (recherche sur la table du CI) et Lookup (recherche via une table liée).",
+      "Grâce aux règles d'identification, ServiceNow évite la création de CI en double, ce qui maintient l'intégrité et l'exactitude de la CMDB."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le guichetier compare l'objet livré au registre : même numéro de série ? C'est le four connu, on met sa fiche à jour. Sinon même nom ? Sinon même adresse MAC ? Si rien ne correspond, c'est un nouveau four : nouvelle fiche.",
+      "fonction": "Décider « mise à jour » ou « création » de façon fiable, quelle que soit la source.",
+      "limite": "Le flux Serial → Name → MAC est un EXEMPLE du cours ; dans ServiceNow l'ordre réel dépend des identifier entries et de leurs priorités, définies par classe."
+    },
+    "pieges_examen": [
+      "Identification = existe déjà (Update CI) ou nouveau (Create CI).",
+      "Create CI seulement si AUCUNE correspondance (serial, name, MAC dans l'exemple).",
+      "Après un Update CI vient la réconciliation (si et comment mettre à jour).",
+      "Une règle d'identification doit avoir au moins une identifier entry active.",
+      "Identifier entries : types Standard et Lookup."
+    ],
+    "source": "CMDB Fundamentals, « Configure the CMDB », leçons 2/8 et 3/8 – onglet Identification, « IRE process flow », écran Identification Rule du CI Class Manager — info manquante : suite de la section « Identification process » et « Identification rules »."
+  },
+  {
+    "id": "regles-identification-benefices",
+    "theme": "configurer-cmdb",
+    "titre": "Pourquoi configurer des règles d'identification",
+    "definition": "Si les données de la CMDB sont inexactes, les rapports et processus qui en dépendent peuvent échouer et mettre l'organisation en risque. Les règles d'identification du processus IRE rendent la CMDB plus exacte, avec moins de doublons.",
+    "points_cles": [
+      "Data Integrity : empêche les CI en double ; chaque CI est unique et représenté avec exactitude.",
+      "Consistency : méthode centralisée pour identifier les CI quelles que soient les sources et méthodes de découverte.",
+      "Efficiency : automatise l'identification des CI, réduit l'effort manuel et les erreurs.",
+      "Improved Data Quality : informations exactes et à jour, ce qui rend plus efficaces les autres produits ServiceNow qui s'appuient sur ces données."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Une règle unique, au guichet, pour reconnaître chaque four : jamais deux fiches pour le même four (intégrité), la même méthode quel que soit le livreur (cohérence), sans vérification à la main (efficacité), et un registre fiable pour toute la maison (qualité).",
+      "fonction": "Retenir les 4 bénéfices et le risque d'une CMDB inexacte.",
+      "limite": "L'analogie ne montre pas l'effet sur les autres produits ServiceNow (incident, changement…) qui consomment ces données."
+    },
+    "pieges_examen": [
+      "4 bénéfices : Data Integrity, Consistency, Efficiency, Improved Data Quality.",
+      "Consistency = méthode centralisée entre sources ET méthodes de découverte.",
+      "Données inexactes → rapports et processus qui échouent → organisation en risque."
+    ],
+    "source": "CMDB Fundamentals, « Configure the CMDB », leçon 3/8 – « Why configure identification rules? »"
+  },
+  {
+    "id": "regles-hardware-application",
+    "theme": "configurer-cmdb",
+    "titre": "Règles d'identification Hardware et Application",
+    "definition": "ServiceNow fournit des centaines de règles d'identification prêtes à l'emploi (out-of-the-box). Le cours en détaille deux : la Hardware Rule (indépendante) et l'Application Rule (dépendante), règle par défaut pour toutes les applications si aucune règle plus spécifique n'est définie sur une classe étendue.",
+    "points_cles": [
+      "Hardware Rule : Independent, s'applique à Hardware. Identifier entries : table Serial Number (serial_number, serial_number_type) priorité 100 ; Hardware (serial_number) 200 ; Hardware (name) 300 ; Network Adapter (mac_address, name) 400.",
+      "Dans l'exemple, le flux IRE suit l'ordre de ces priorités : numéro de série, puis nom, puis adresse MAC.",
+      "Application Rule : Dependent, définie sur la table Application [cmdb_ci_appl] ; règle par défaut pour identifier insertions et mises à jour de toutes les applications, sauf règle plus spécifique sur une classe étendue.",
+      "Application Rule : 2 identifier entries Standard sur la table Application, priorités 75 et 100 (critères visibles : Credentialless Discovery…, Running process command…).",
+      "On consulte ou configure les règles via le module CI Identifiers (navigation de gauche) ou via l'onglet Identification Rule de n'importe quelle classe dans le CI Class Manager."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Pour un four (Hardware), le guichetier le reconnaît tout seul, d'après sa plaque : numéro de série, sinon nom, sinon adresse réseau (règle indépendante). Une application, elle, ne se reconnaît pas toute seule : elle dépend de l'appareil sur lequel elle tourne, comme une recette qu'on identifie par la station qui la prépare (règle dépendante).",
+      "fonction": "Distinguer les CI identifiables seuls de ceux qui ont besoin d'un autre CI pour être identifiés, et savoir où trouver les règles.",
+      "limite": "Les critères exacts de l'Application Rule sont tronqués sur la capture (« Credentialless Discovery Por… », « Running process command, R… ») : ne pas en déduire la liste complète."
+    },
+    "pieges_examen": [
+      "Hardware Rule = Independent ; Application Rule = Dependent.",
+      "Application Rule = règle par défaut, définie sur cmdb_ci_appl, remplacée par une règle plus spécifique sur une classe étendue.",
+      "Accès : module CI Identifiers OU onglet Identification Rule du CI Class Manager.",
+      "Hardware Rule : serial (100, 200), name (300), MAC + name sur Network Adapter (400)."
+    ],
+    "source": "CMDB Fundamentals, « Configure the CMDB », leçon 3/8 – vidéo « Identification rules overview » (Identifier Entries Table) et onglets Hardware Rule / Application Rule — info manquante : critères complets de l'Application Rule."
   }
 ]
