@@ -16,5 +16,11 @@
     "titre": "Construire et exploiter la CMDB",
     "description": "Cours CMDB Fundamentals, leçons 5 à 7 : cas d'usage, étapes vers une CMDB fiable, gouvernance (CCB), modèle de données, trois piliers Ingest / Govern / Insight et outils associés.",
     "analogie_fil_rouge": "On ouvre puis on fait tourner le restaurant et son registre. Fixer la direction = choisir le concept avant d'acheter quoi que ce soit ; le CCB = le comité de direction ; le modèle de données = le plan du registre. Ensuite trois métiers : approvisionner le registre (Ingest : les livraisons entrent, contrôlées à la porte par l'IRE), le tenir propre (Govern : inspections d'hygiène, doublons, mise au rebut) et s'en servir (Insight : le gérant interroge, visualise, pilote)."
+  },
+  {
+    "id": "configurer-cmdb",
+    "titre": "Configurer la CMDB",
+    "description": "Module « Configure the CMDB » : CI Class Manager, création et extension de classes.",
+    "analogie_fil_rouge": "Le CI Class Manager est le classeur central des catégories d'équipements du restaurant : on y voit l'arborescence des catégories, la fiche type de chacune (ses cases, les règles pour reconnaître un appareil déjà enregistré, la source qui fait foi), et on peut y ajouter une sous-catégorie. Avant d'inventer une catégorie, on consulte le catalogue étendu du fournisseur (CMDB CI Class Models), et on préfère toujours une sous-catégorie d'une catégorie existante."
   }
 ]

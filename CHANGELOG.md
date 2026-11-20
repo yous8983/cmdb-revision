@@ -1,5 +1,11 @@
 # Changelog
 
+## [v4] – 2026-11-20
+- Nouveau thème « Configurer la CMDB » (module Configure the CMDB, leçon 1/8) : CI Class Manager et création / extension de classes. 2 notions, 8 questions.
+- Notion « Classes et hiérarchie » complétée : l'application qui ajoute des classes est CMDB CI Class Models.
+- Total : 4 thèmes, 27 notions, 83 questions.
+- CACHE_VERSION → 4.
+
 ## [v3] – 2026-11-20
 - Nouveau thème « Construire et exploiter la CMDB » (leçons 5 à 7), analogie : le restaurant qu'on ouvre puis qu'on fait tourner.
 - 14 notions, 41 questions : cas d'usage hors IT, 4 étapes vers une CMDB fiable, fixer la direction, CCB et rôles, conception du modèle de données, trois piliers Ingest / Govern / Insight, Service Graph Connectors, IntegrationHub ETL, Import Sets / Transform Maps, CMDB Health Dashboard, CMDB Data Manager, dédoublonnage, outils Insight, licences et accès.

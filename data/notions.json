@@ -106,7 +106,7 @@
       "Et : Hardware → Computer [cmdb_ci_computer] → Server [cmdb_ci_server] → Windows Server [cmdb_ci_win_server] et Linux Server [cmdb_ci_linux_server].",
       "On visualise la structure avec le CI Class Manager ou le schema map de ServiceNow.",
       "Bonne pratique : garder des classes simples et utiliser les classes de base fournies par ServiceNow. Plus on descend dans la hiérarchie, plus les CI sont spécialisés.",
-      "Une application peut être installée sur l'instance pour obtenir de nombreuses classes supplémentaires, absentes d'une instance de base."
+      "L'application CMDB CI Class Models (ServiceNow Store) ajoute de nombreuses classes prescrites par ServiceNow, absentes d'une instance de base."
     ],
     "analogie": {
       "univers": "restaurant",
@@ -120,7 +120,7 @@
       "Outils de visualisation : CI Class Manager et schema map.",
       "Privilégier les classes de base ServiceNow plutôt que d'en créer."
     ],
-    "source": "CMDB Fundamentals, leçon 3/9 – « Class hierarchy view within CI Class Manager » et « CMDB sample class structure » — info manquante : nom de l'application qui ajoute des classes (début de phrase coupé)."
+    "source": "CMDB Fundamentals, leçon 3/9 – « Class hierarchy view within CI Class Manager » et « CMDB sample class structure » ; nom de l'application confirmé dans « Configure the CMDB », leçon 1/8."
   },
   {
     "id": "references-cmdb-ci",
@@ -635,5 +635,60 @@
       "Store ≠ payant."
     ],
     "source": "CMDB Fundamentals, leçon 7/9 – mentions « Requires paid license » de chaque outil"
+  },
+  {
+    "id": "ci-class-manager",
+    "theme": "configurer-cmdb",
+    "titre": "CI Class Manager : rôle et avantages",
+    "definition": "Le CI Class Manager est l'outil central pour gérer les classes de CI de la CMDB : hiérarchie, définitions, attributs, règles d'identification et de réconciliation, santé et extension.",
+    "points_cles": [
+      "Centralized management : un endroit unique pour voir et gérer la hiérarchie des classes, en arborescence (tree view).",
+      "Class definitions and settings : voir, créer ou modifier les définitions de classe et leurs réglages d'identification rules, reconciliation rules et CMDB Health.",
+      "Hierarchy and relationships : voir la hiérarchie des classes et leurs relations parent-enfant.",
+      "Attributes and rules management : gérer attributs, identification rules, reconciliation rules, suggested relationships et toutes les relations d'une classe.",
+      "Health and compliance : créer des compliance audits, des certification filters et des templates ; rendre des champs recommandés ou obligatoires (mandatory).",
+      "Extensibility : créer de nouvelles classes enfants ou mettre à jour des classes existantes.",
+      "Improved data accuracy : en gérant les règles d'identification et de réconciliation, il assure exactitude et cohérence des données.",
+      "Identification Rule (écran) : indique si un CI peut être identifié indépendamment ou non, et comprend au moins une entrée d'identifiant active."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Le classeur central des catégories d'équipements : l'arbre des catégories, et pour chacune sa fiche type (cases, cases obligatoires), la règle pour reconnaître un appareil déjà enregistré (identification), la règle qui dit quelle source fait foi (réconciliation), et les branchements habituels (suggested relationships).",
+      "fonction": "Tout ce qui définit une catégorie se règle au même endroit, ce qui garde le registre cohérent.",
+      "limite": "Dans le classeur, une règle s'écrit une fois ; dans ServiceNow, identification et réconciliation se règlent par classe et pèsent directement sur l'exactitude : l'analogie ne montre pas leur effet sur les imports."
+    },
+    "pieges_examen": [
+      "Identification rules ET reconciliation rules se gèrent dans le CI Class Manager.",
+      "On peut y rendre des champs recommandés ou obligatoires.",
+      "Extensibility = nouvelles classes ENFANTS ou mise à jour de classes existantes.",
+      "Rappel leçon 7 : le CI Class Manager est rangé dans le pilier Govern."
+    ],
+    "source": "CMDB Fundamentals, module « Configure the CMDB », leçon 1/8 – « CI Class Manager overview »"
+  },
+  {
+    "id": "creation-classes",
+    "theme": "configurer-cmdb",
+    "titre": "Créer ou étendre une classe : prudence",
+    "definition": "Créer de nouvelles classes avec le CI Class Manager est possible mais doit se faire avec prudence : il y a des implications de licence, de gouvernance et d'insight, et on risque de dupliquer des classes existantes.",
+    "points_cles": [
+      "Éviter de créer des classes permet : standardisation, maintenance et mises à jour (upgrades) plus simples, interopérabilité, qualité et intégrité des données, accès au support et à la communauté → CMDB plus efficace, fiable et économique.",
+      "Consulter la documentation ServiceNow et la ServiceNow Community.",
+      "Si une nouvelle classe semble nécessaire : installer d'abord l'application CMDB CI Class Models (ServiceNow Store), qui fournit de nombreuses classes supplémentaires prescrites par ServiceNow.",
+      "Une classe système de base adaptée existe très probablement ; sinon, il est recommandé d'ÉTENDRE une classe existante avec la nouvelle classe.",
+      "Seuls peuvent créer des classes : les utilisateurs ayant sn_cmdb_admin ET personalize_dictionary, ou admin.",
+      "Supprimer une classe personnalisée pour réduire la dette technique fait l'objet de recommandations (non capturées)."
+    ],
+    "analogie": {
+      "univers": "restaurant",
+      "image": "Avant d'inventer la catégorie « four à pizza au feu de bois du chef », on consulte le catalogue étendu du fournisseur (CMDB CI Class Models) ; si rien ne convient, on crée une sous-catégorie de « four » plutôt qu'une catégorie partie de rien. Et seul le gérant du registre autorisé à modifier les fiches types (ou le directeur) peut le faire.",
+      "fonction": "Préserver un registre standard : moins de catégories maison, moins de doublons de catégories, mises à jour plus simples.",
+      "limite": "L'analogie ne rend pas compte des implications de licence et d'insight évoquées par le cours, ni du détail des rôles : retenez le couple exact sn_cmdb_admin + personalize_dictionary, ou admin."
+    },
+    "pieges_examen": [
+      "Ordre : 1) chercher une classe de base, 2) installer CMDB CI Class Models, 3) étendre une classe existante. Créer de zéro = dernier recours.",
+      "Rôles : sn_cmdb_admin seul ne suffit pas, il faut aussi personalize_dictionary (ou admin).",
+      "Risques d'une nouvelle classe : licence, gouvernance, insight, doublon de classe."
+    ],
+    "source": "CMDB Fundamentals, module « Configure the CMDB », leçon 1/8 – encadré « Important » sur la création de classes — info manquante : recommandations pour supprimer une classe personnalisée (coupées)."
   }
 ]

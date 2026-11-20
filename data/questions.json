@@ -1334,5 +1334,148 @@
     ],
     "explication": "Health Dashboard, Query Builder et Unified Map : Management. Intelligent Search : Home.",
     "analogie": "Le bureau du gérant regroupe les outils de pilotage."
+  },
+  {
+    "id": "q-ci-class-manager-1",
+    "theme": "configurer-cmdb",
+    "notion": "ci-class-manager",
+    "question": "Quelles règles peut-on gérer dans le CI Class Manager ? (plusieurs réponses)",
+    "choix": [
+      "Identification rules",
+      "Reconciliation rules",
+      "Suggested relationships",
+      "Transform maps"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Attributes and rules management : attributs, identification rules, reconciliation rules, suggested relationships et relations. Les transform maps relèvent des Import Sets.",
+    "analogie": "La fiche type d'une catégorie dit comment reconnaître l'appareil, quelle source fait foi et à quoi il se branche d'habitude."
+  },
+  {
+    "id": "q-ci-class-manager-2",
+    "theme": "configurer-cmdb",
+    "notion": "ci-class-manager",
+    "question": "Que permet le volet « Health and compliance » du CI Class Manager ? (plusieurs réponses)",
+    "choix": [
+      "Créer des compliance audits",
+      "Créer des certification filters et des templates",
+      "Rendre des champs CI recommandés ou obligatoires",
+      "Importer des données depuis un CSV"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Health and compliance : compliance audits, certification filters, templates, et champs recommended ou mandatory.",
+    "analogie": "Rendre la case « emplacement » obligatoire sur toutes les fiches de four."
+  },
+  {
+    "id": "q-ci-class-manager-3",
+    "theme": "configurer-cmdb",
+    "notion": "ci-class-manager",
+    "question": "Sous quelle forme le CI Class Manager présente-t-il la hiérarchie des classes ?",
+    "choix": [
+      "Une arborescence (tree view)",
+      "Un tableau croisé",
+      "Une carte géographique",
+      "Un diagramme de Gantt"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Centralized management : la hiérarchie des classes est présentée en tree-view.",
+    "analogie": "L'arbre des catégories du classeur."
+  },
+  {
+    "id": "q-ci-class-manager-4",
+    "theme": "configurer-cmdb",
+    "notion": "ci-class-manager",
+    "question": "Que dit l'écran Identification Rule d'une classe ?",
+    "choix": [
+      "Si un CI peut être identifié indépendamment ou non, avec au moins une entrée d'identifiant active",
+      "Quelle source de données est prioritaire",
+      "Quels utilisateurs peuvent voir la classe",
+      "Quel est le coût de licence de la classe"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Identification Rule : indique si un CI peut être identifié indépendamment ou autrement, et inclut au moins une entrée d'identifiant active. La priorité des sources relève de la réconciliation.",
+    "analogie": "La règle pour reconnaître qu'un four livré est déjà dans le registre."
+  },
+  {
+    "id": "q-creation-classes-1",
+    "theme": "configurer-cmdb",
+    "notion": "creation-classes",
+    "question": "Quels utilisateurs peuvent créer de nouvelles classes CMDB ? (plusieurs réponses)",
+    "choix": [
+      "Ceux qui ont sn_cmdb_admin ET personalize_dictionary",
+      "Ceux qui ont admin",
+      "Ceux qui ont seulement sn_cmdb_admin",
+      "Ceux qui ont itil"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "Le cours : sn_cmdb_admin and personalize_dictionary, ou admin. sn_cmdb_admin seul ne suffit pas.",
+    "analogie": "Seul le gérant autorisé à modifier les fiches types, ou le directeur, crée une catégorie."
+  },
+  {
+    "id": "q-creation-classes-2",
+    "theme": "configurer-cmdb",
+    "notion": "creation-classes",
+    "question": "Avant de créer une nouvelle classe, que faut-il faire d'abord ?",
+    "choix": [
+      "Installer l'application CMDB CI Class Models du ServiceNow Store",
+      "Créer la classe directement sous cmdb_ci",
+      "Désactiver l'IRE",
+      "Lancer un import CSV"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Le cours recommande d'installer d'abord CMDB CI Class Models, qui apporte de nombreuses classes prescrites par ServiceNow.",
+    "analogie": "Consulter le catalogue étendu du fournisseur avant d'inventer une catégorie."
+  },
+  {
+    "id": "q-creation-classes-3",
+    "theme": "configurer-cmdb",
+    "notion": "creation-classes",
+    "question": "Si aucune classe existante ne convient, quelle est la recommandation ?",
+    "choix": [
+      "Étendre une classe existante avec la nouvelle classe",
+      "Créer une classe indépendante sans parent",
+      "Ajouter des champs personnalisés à cmdb_ci",
+      "Utiliser une table hors CMDB"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "« If not, it is recommended to extend an existing class with the new class. »",
+    "analogie": "Créer une sous-catégorie de « four », pas une catégorie partie de rien."
+  },
+  {
+    "id": "q-creation-classes-4",
+    "theme": "configurer-cmdb",
+    "notion": "creation-classes",
+    "question": "Quels risques le cours associe-t-il à la création de nouvelles classes ? (plusieurs réponses)",
+    "choix": [
+      "Implications de licence",
+      "Implications de gouvernance et d'insight",
+      "Duplication involontaire de classes existantes",
+      "Perte des relations parent-enfant de toute la CMDB"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Potential license, governance, and insight implications, et risque de dupliquer des classes existantes.",
+    "analogie": "Deux catégories « four » et « appareil de cuisson à pizza » pour la même chose."
   }
 ]
